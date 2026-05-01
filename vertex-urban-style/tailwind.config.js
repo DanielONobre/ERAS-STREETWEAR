@@ -14,6 +14,11 @@ export default {
     theme: {
         extend: {
             colors: {
+                'eras-black':    '#0F0F0F',
+                'eras-bone':     '#F5F1EA',
+                'eras-mustard':  '#C8932E',
+                'eras-rust':     '#7A4A1F',
+                'eras-concrete': '#4A4A4A',
                 primary: {
                     50:  '#f0fdfa',
                     100: '#ccfbf1',
@@ -56,9 +61,9 @@ export default {
                 },
             },
             fontFamily: {
-                display: ['Syne', ...defaultTheme.fontFamily.sans],
-                body:    ['DM Sans', ...defaultTheme.fontFamily.sans],
-                sans:    ['DM Sans', ...defaultTheme.fontFamily.sans],
+                display: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+                body:    ['Inter', 'system-ui', 'sans-serif'],
+                sans:    ['Inter', 'system-ui', 'sans-serif'],
                 mono:    ['JetBrains Mono', ...defaultTheme.fontFamily.mono],
             },
             fontSize: {

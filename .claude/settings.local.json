@@ -30,7 +30,9 @@
       "Bash(cmd /c \"php artisan route:list --columns=method,uri,name 2>&1\")",
       "Bash(grep -E \"\\\\.\\(config|env|json|js\\)$\")",
       "Bash(ls:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "PowerShell($maxWait = 90; $elapsed = 0; do { Start-Sleep -Seconds 5; $elapsed += 5; $binExists = Test-Path \"C:\\\\ERAS-STREETWEAR\\\\vertex-urban-style\\\\node_modules\\\\.bin\" } while \\(-not $binExists -and $elapsed -lt $maxWait\\); Write-Host \"Waited ${elapsed}s. .bin exists: $binExists\")",
+      "PowerShell(Get-Location; Test-Path \"C:\\\\ERAS-STREETWEAR\\\\vertex-urban-style\\\\artisan\"; php --version 2>&1)"
     ]
   }
 }

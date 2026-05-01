@@ -11,6 +11,12 @@
         --color-accent:        249 115 22;
         --color-dark:          8 13 20;
         --navbar-height:       64px;
+
+        --eras-black:          #0F0F0F;
+        --eras-bone:           #F5F1EA;
+        --eras-mustard:        #C8932E;
+        --eras-rust:           #7A4A1F;
+        --eras-concrete:       #4A4A4A;
     }
 
     html {
