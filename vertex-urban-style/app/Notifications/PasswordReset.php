@@ -26,7 +26,7 @@ class PasswordReset extends Notification implements ShouldQueue
         ], false));
 
         return (new MailMessage)
-            ->subject('Redefinição de senha — Vertex Urban Style')
+            ->subject('Redefinição de senha — ERAS Streetwear')
             ->view('emails.password-reset', [
                 'url'      => $url,
                 'customer' => $notifiable,

@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ShieldCheckIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { Link } from '@inertiajs/react';
 
-const STORAGE_KEY = 'vertex_cookie_consent';
+const STORAGE_KEY = 'eras_cookie_consent';
 
 export default function CookieConsent() {
     const [visible, setVisible] = useState(false);

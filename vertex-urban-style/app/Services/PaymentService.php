@@ -87,7 +87,7 @@ class PaymentService
         }
 
         $expiresAt = now()->addMinutes(30);
-        $pixKey    = '00020126580014BR.GOV.BCB.PIX0136vertex-' . str_pad($order->id, 8, '0', STR_PAD_LEFT);
+        $pixKey    = '00020126580014BR.GOV.BCB.PIX0136eras-' . str_pad($order->id, 8, '0', STR_PAD_LEFT);
         $payload   = $this->buildPixPayload($order, $expiresAt);
 
         return [
@@ -250,7 +250,7 @@ class PaymentService
     private function buildPixPayload(Order $order, \Carbon\Carbon $expiresAt): string
     {
         // Payload Pix BR.GOV.BCB simplificado (EMV-like)
-        $merchantName = 'VERTEX URBAN STYLE';
+        $merchantName = 'ERAS STREETWEAR';
         $city         = 'SAO PAULO';
         $amount       = number_format($order->total, 2, '.', '');
 

@@ -17,7 +17,7 @@ export default function CategoryShow({ category, products, filters }) {
 
     return (
         <StoreLayout
-            title={`${category.name} — VERTEX`}
+            title={`${category.name} — ERAS`}
             description={category.description}
         >
             <div className="container-page py-8 lg:py-12">

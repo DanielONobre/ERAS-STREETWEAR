@@ -21,7 +21,7 @@ export default function AccountOrderDetail({ order }) {
     };
 
     return (
-        <StoreLayout title={`Pedido #${order.id} — VERTEX`}>
+        <StoreLayout title={`Pedido #${order.id} — ERAS`}>
             <AccountLayout active="orders">
                 {/* Back */}
                 <Link href={route('account.orders')} className="inline-flex items-center gap-1.5 text-sm text-white/40 hover:text-white transition-colors mb-6">

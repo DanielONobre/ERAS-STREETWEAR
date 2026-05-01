@@ -61,7 +61,7 @@ function PixCountdown({ expiresAt }) {
 }
 
 /* ─── Pix mock data ─────────────────────────────────────────────────── */
-const PIX_CODE = 'VERTEX00010126BRBRCUPBR01041234567890123456789012345678901234';
+const PIX_CODE = 'ERAS000001012026BRBRCUPBR01041234567890123456789012345678901234';
 const PIX_EXPIRES = new Date(Date.now() + 30 * 60 * 1000).toISOString();
 
 /* ─── Boleto mock ────────────────────────────────────────────────────── */
@@ -153,8 +153,8 @@ export default function CheckoutIndex({ cart, pricing, addresses = [] }) {
     return (
         <StoreLayout>
             <Head>
-                <title>Checkout — Vertex Urban Style</title>
-                <meta name="description" content="Finalize sua compra de forma segura na Vertex Urban Style." />
+                <title>Checkout — ERAS Streetwear</title>
+                <meta name="description" content="Finalize sua compra de forma segura na ERAS Streetwear." />
             </Head>
 
             <div className="container-page py-8 lg:py-12 max-w-5xl">
@@ -454,7 +454,7 @@ export default function CheckoutIndex({ cart, pricing, addresses = [] }) {
                                                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent" />
                                                 <div className="relative z-10">
                                                     <div className="flex items-center justify-between mb-6">
-                                                        <span className="text-xs text-white/40 uppercase tracking-widest">Vertex Card</span>
+                                                        <span className="text-xs text-white/40 uppercase tracking-widest">ERAS Card</span>
                                                         {brand && <span className="text-sm font-semibold text-white">{brand}</span>}
                                                     </div>
                                                     <p className="font-mono text-lg text-white tracking-widest">

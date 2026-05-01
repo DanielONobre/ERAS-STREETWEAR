@@ -31,7 +31,7 @@ export default function AccountAddresses({ addresses }) {
     };
 
     return (
-        <StoreLayout title="Endereços — VERTEX">
+        <StoreLayout title="Endereços — ERAS">
             <AccountLayout active="addresses">
                 <div className="flex items-center justify-between mb-6">
                     <h1 className="section-title">Meus endereços</h1>

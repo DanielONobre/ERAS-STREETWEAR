@@ -176,7 +176,7 @@ export default function ProductShow({ product, relatedProducts = [] }) {
     /* Share */
     const handleShare = async (network) => {
         const url = window.location.href;
-        const text = encodeURIComponent(`${product.name} — Vertex Urban Style`);
+        const text = encodeURIComponent(`${product.name} — ERAS Streetwear`);
         const links = {
             whatsapp: `https://wa.me/?text=${text}%20${encodeURIComponent(url)}`,
             facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
@@ -218,8 +218,8 @@ export default function ProductShow({ product, relatedProducts = [] }) {
         { label: product.name },
     ];
 
-    const seoTitle = `${product.name} — ${product.brand?.name ?? 'Vertex Urban Style'}`;
-    const seoDesc  = product.short_description ?? `Compre ${product.name} na Vertex Urban Style. ${inStock ? 'Em estoque' : 'Fora de estoque'}.`;
+    const seoTitle = `${product.name} — ${product.brand?.name ?? 'ERAS Streetwear'}`;
+    const seoDesc  = product.short_description ?? `Compre ${product.name} na ERAS Streetwear. ${inStock ? 'Em estoque' : 'Fora de estoque'}.`;
 
     return (
         <StoreLayout>

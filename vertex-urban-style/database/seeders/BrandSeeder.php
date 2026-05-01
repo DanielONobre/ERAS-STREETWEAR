@@ -11,10 +11,10 @@ class BrandSeeder extends Seeder
     {
         $brands = [
             [
-                'name'        => 'Vertex',
-                'slug'        => 'vertex',
+                'name'        => 'Eras',
+                'slug'        => 'eras',
                 'logo'        => 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=200',
-                'description' => 'Marca principal da Vertex Urban Style. DNA 100% streetwear brasileiro.',
+                'description' => 'Marca principal da ERAS Streetwear. DNA 100% streetwear brasileiro.',
                 'is_active'   => true,
             ],
             [

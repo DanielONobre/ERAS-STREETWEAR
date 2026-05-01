@@ -6,7 +6,7 @@ import { createInertiaApp } from '@inertiajs/react';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import { AnimatePresence, motion } from 'framer-motion';
 
-const appName = import.meta.env.VITE_APP_NAME || 'Vertex Urban Style';
+const appName = import.meta.env.VITE_APP_NAME || 'ERAS Streetwear';
 
 /** Variantes de page transition — fade + slide sutil */
 const pageVariants = {

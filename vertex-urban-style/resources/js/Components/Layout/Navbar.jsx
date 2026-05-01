@@ -49,7 +49,7 @@ export default function Navbar({ onCartClick }) {
                     {/* Logo */}
                     <Link href={route('home')} className="flex-shrink-0">
                         <span className="font-display text-xl font-bold text-gradient-brand">
-                            VERTEX
+                            ERAS
                         </span>
                     </Link>
 

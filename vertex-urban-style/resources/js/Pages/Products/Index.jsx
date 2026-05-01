@@ -51,12 +51,12 @@ export default function ProductsIndex({
     ];
 
     const seoTitle = filters.search
-        ? `"${filters.search}" — Produtos | Vertex Urban Style`
+        ? `"${filters.search}" — Produtos | ERAS Streetwear`
         : filters.category
-            ? `${filters.category} — Vertex Urban Style`
-            : 'Todos os Produtos — Vertex Urban Style';
+            ? `${filters.category} — ERAS Streetwear`
+            : 'Todos os Produtos — ERAS Streetwear';
 
-    const seoDesc = `Encontre ${products?.total ?? ''} produtos de streetwear na Vertex Urban Style. Frete grátis acima de R$299.`;
+    const seoDesc = `Encontre ${products?.total ?? ''} produtos de streetwear na ERAS Streetwear. Frete grátis acima de R$299.`;
 
     return (
         <StoreLayout>

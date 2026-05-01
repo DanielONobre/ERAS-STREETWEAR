@@ -1,11 +1,11 @@
 {
-    "name": "Vertex Urban Style",
-    "short_name": "Vertex",
+    "name": "ERAS Streetwear",
+    "short_name": "ERAS",
     "description": "Streetwear premium com identidade urbana.",
     "start_url": "/",
     "display": "standalone",
-    "background_color": "#080d14",
-    "theme_color": "#080d14",
+    "background_color": "#0F0F0F",
+    "theme_color": "#0F0F0F",
     "icons": [
         {
             "src": "/favicon.svg",

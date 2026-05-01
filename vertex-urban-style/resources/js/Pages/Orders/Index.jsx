@@ -15,7 +15,7 @@ const fmt = (v) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency:
 
 export default function OrdersIndex({ orders }) {
     return (
-        <AppLayout title="Meus Pedidos — Vertex Urban Style">
+        <AppLayout title="Meus Pedidos — ERAS Streetwear">
             <div className="container-page py-8 lg:py-12 max-w-3xl">
                 <h1 className="section-title mb-8">Meus Pedidos</h1>
 

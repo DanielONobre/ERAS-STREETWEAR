@@ -12,10 +12,10 @@ class UserSeeder extends Seeder
     {
         $users = [
             [
-                'name'              => 'Admin Vertex',
-                'email'             => 'admin@vertex.com',
+                'name'              => 'ERAS Admin',
+                'email'             => 'admin@eras.com.br',
                 'email_verified_at' => now(),
-                'password'          => Hash::make('password'),
+                'password'          => Hash::make('eras2026'),
                 'phone'             => '(11) 99999-0001',
                 'cpf'               => null,
                 'avatar'            => null,

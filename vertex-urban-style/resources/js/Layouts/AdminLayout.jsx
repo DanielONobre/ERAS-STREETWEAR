@@ -110,10 +110,10 @@ function Sidebar({ open, onClose, stats }) {
                 <div className="flex items-center justify-between px-5 h-16 border-b border-white/[0.06] flex-shrink-0">
                     <Link href="/" className="flex items-center gap-2 group">
                         <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-primary to-primary-700 flex items-center justify-center flex-shrink-0">
-                            <span className="font-display font-bold text-xs text-white">V</span>
+                            <span className="font-display font-bold text-xs text-white">E</span>
                         </div>
                         <span className="font-display font-bold text-white tracking-tight">
-                            VERTEX
+                            ERAS
                             <span className="text-primary">.</span>
                         </span>
                     </Link>
@@ -176,7 +176,7 @@ function Sidebar({ open, onClose, stats }) {
                         </div>
                         <div className="min-w-0">
                             <p className="text-xs font-medium text-white/80 truncate">Administrador</p>
-                            <p className="text-[10px] text-white/30 truncate">admin@vertex.com</p>
+                            <p className="text-[10px] text-white/30 truncate">admin@eras.com.br</p>
                         </div>
                     </div>
                 </div>
@@ -364,7 +364,7 @@ export default function AdminLayout({ children, title, breadcrumbs, stats }) {
     return (
         <SidebarCtx.Provider value={{ open: sidebarOpen, setOpen: setSidebarOpen }}>
             <Head>
-                <title>{title ? `${title} — Admin | Vertex` : 'Admin — Vertex Urban Style'}</title>
+                <title>{title ? `${title} — Admin | ERAS` : 'Admin — ERAS Streetwear'}</title>
             </Head>
 
             <div className="flex h-screen bg-dark overflow-hidden">

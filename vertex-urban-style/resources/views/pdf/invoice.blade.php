@@ -63,8 +63,8 @@
     {{-- Header --}}
     <div class="header">
         <div>
-            <div class="logo">Vertex<span>.</span></div>
-            <div style="font-size:11px; color:#64748b; margin-top:4px">Urban Style</div>
+            <div class="logo">ERAS<span>.</span></div>
+            <div style="font-size:11px; color:#64748b; margin-top:4px">Streetwear</div>
             <div style="font-size:10px; color:#94a3b8; margin-top:8px">
                 CNPJ: 00.000.000/0001-00<br />
                 Av. Paulista, 1000 — São Paulo, SP
@@ -167,7 +167,7 @@
     {{-- Footer --}}
     <div class="footer">
         <p>Este documento é um comprovante eletrônico e não possui valor fiscal.</p>
-        <p style="margin-top:4px">Para dúvidas, acesse {{ config('app.url') }} ou envie e-mail para contato@vertexurbanstyle.com.br</p>
+        <p style="margin-top:4px">Para dúvidas, acesse {{ config('app.url') }} ou envie e-mail para contato@eras.com.br</p>
     </div>
 
 </div>

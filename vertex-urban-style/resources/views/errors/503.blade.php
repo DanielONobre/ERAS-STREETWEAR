@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Em Manutenção — Vertex Urban Style</title>
+    <title>Em Manutenção — ERAS Streetwear</title>
     <meta name="robots" content="noindex">
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -66,7 +66,7 @@
 <body>
     <div class="glow"></div>
 
-    <span class="logo">VERTEX<span>.</span></span>
+    <span class="logo">ERAS<span>.</span></span>
 
     <svg class="icon" viewBox="0 0 80 80" fill="none">
         <circle cx="40" cy="40" r="36" stroke="#0d9488" stroke-opacity="0.4" stroke-width="2"/>
@@ -88,6 +88,6 @@
     </div>
     @endif
 
-    <footer>© {{ date('Y') }} Vertex Urban Style</footer>
+    <footer>© {{ date('Y') }} ERAS Streetwear</footer>
 </body>
 </html>

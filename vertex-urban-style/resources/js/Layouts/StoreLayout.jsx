@@ -23,7 +23,7 @@ export default function StoreLayout({ children, title, description }) {
         <CartProvider>
             {/* Head */}
             <Head>
-                {title       && <title>{title} — VERTEX</title>}
+                {title       && <title>{title} — ERAS</title>}
                 {description && <meta name="description" content={description} />}
             </Head>
 

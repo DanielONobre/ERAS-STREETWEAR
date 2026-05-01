@@ -1,7 +1,7 @@
 {
-    "name": "vertex/urban-style",
+    "name": "eras/streetwear",
     "type": "project",
-    "description": "Vertex Urban Style - E-commerce de Moda Streetwear",
+    "description": "ERAS Streetwear - E-commerce de Moda Streetwear Premium",
     "keywords": ["laravel", "framework", "ecommerce", "streetwear"],
     "license": "MIT",
     "require": {

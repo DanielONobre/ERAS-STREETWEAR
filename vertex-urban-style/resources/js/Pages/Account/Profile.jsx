@@ -45,7 +45,7 @@ export default function AccountProfile({ user }) {
     );
 
     return (
-        <StoreLayout title="Meu perfil — VERTEX">
+        <StoreLayout title="Meu perfil — ERAS">
             <AccountLayout active="profile">
                 <h1 className="section-title mb-6">Meu perfil</h1>
 

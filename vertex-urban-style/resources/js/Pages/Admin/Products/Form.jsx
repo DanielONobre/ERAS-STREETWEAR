@@ -133,7 +133,7 @@ function ImageDropzone({ images, onAdd, onRemove, onSetMain, onReorder }) {
 
 /* ─── Google Preview ─────────────────────────────────────────────────── */
 function GooglePreview({ title, description, slug }) {
-    const url = `vertexurbanstyle.com.br/produtos/${slug || 'produto-exemplo'}`;
+    const url = `erasstreetwear.com.br/produtos/${slug || 'produto-exemplo'}`;
     return (
         <div className="bg-white rounded-xl p-4 max-w-xl">
             <p className="text-[#202124] text-xs mb-0.5 truncate">{url}</p>
@@ -208,7 +208,7 @@ export default function ProductForm({
     /* Auto meta_title */
     useEffect(() => {
         if (!data.meta_title) {
-            setData('meta_title', data.name ? `${data.name} — Vertex Urban Style` : '');
+            setData('meta_title', data.name ? `${data.name} — ERAS Streetwear` : '');
         }
     }, [data.name]);
 

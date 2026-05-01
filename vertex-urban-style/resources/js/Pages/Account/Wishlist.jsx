@@ -28,7 +28,7 @@ export default function AccountWishlist({ items: initialItems }) {
     };
 
     return (
-        <StoreLayout title="Favoritos — VERTEX">
+        <StoreLayout title="Favoritos — ERAS">
             <AccountLayout active="wishlist">
                 <h1 className="section-title mb-6">
                     Favoritos

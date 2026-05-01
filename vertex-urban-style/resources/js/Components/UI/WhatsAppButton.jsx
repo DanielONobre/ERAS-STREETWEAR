@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const PHONE = '5511999999999'; // Replace with actual WhatsApp number
 const MESSAGE = encodeURIComponent(
-    'Olá! Tenho interesse em produtos da Vertex Urban Style. Pode me ajudar?'
+    'Olá! Tenho interesse em produtos da ERAS Streetwear. Pode me ajudar?'
 );
 const WA_URL = `https://wa.me/${PHONE}?text=${MESSAGE}`;
 

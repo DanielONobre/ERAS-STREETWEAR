@@ -27,8 +27,8 @@ export default function SearchIndex({ products, total, query, categories, filter
 
     return (
         <StoreLayout
-            title={query ? `"${query}" — Busca VERTEX` : 'Busca — VERTEX'}
-            description={query ? `${total} resultados para "${query}" na VERTEX.` : undefined}
+            title={query ? `"${query}" — Busca ERAS` : 'Busca — ERAS'}
+            description={query ? `${total} resultados para "${query}" na ERAS.` : undefined}
         >
             <div className="container-page py-8 lg:py-12">
 

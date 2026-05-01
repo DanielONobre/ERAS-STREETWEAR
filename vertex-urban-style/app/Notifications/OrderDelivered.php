@@ -22,7 +22,7 @@ class OrderDelivered extends Notification implements ShouldQueue
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-            ->subject('Pedido #' . $this->order->id . ' entregue! Deixe sua avaliação — Vertex')
+            ->subject('Pedido #' . $this->order->id . ' entregue! Deixe sua avaliação — ERAS')
             ->view('emails.order-delivered', [
                 'order'    => $this->order,
                 'customer' => $notifiable,

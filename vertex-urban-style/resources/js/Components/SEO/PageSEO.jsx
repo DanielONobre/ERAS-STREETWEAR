@@ -13,7 +13,7 @@ export default function PageSEO({
     noindex = false,
 }) {
     const url  = canonical || (typeof window !== 'undefined' ? window.location.href : '');
-    const full = title ? `${title} | Vertex Urban Style` : 'Vertex Urban Style — Streetwear';
+    const full = title ? `${title} | ERAS Streetwear` : 'ERAS Streetwear — Streetwear';
 
     return (
         <Head>

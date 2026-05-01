@@ -9,7 +9,7 @@ import { Head } from '@inertiajs/react';
  *  - canonical <link>
  */
 export default function ProductSEO({ product, category, url }) {
-    const title       = product.meta_title || `${product.name} | Vertex Urban Style`;
+    const title       = product.meta_title || `${product.name} | ERAS Streetwear`;
     const description = product.meta_description || product.short_description || '';
     const image       = product.primary_image || '/images/og-default.jpg';
     const price       = parseFloat(product.price).toFixed(2);
@@ -36,7 +36,7 @@ export default function ProductSEO({ product, category, url }) {
                 ? 'https://schema.org/InStock'
                 : 'https://schema.org/OutOfStock',
             itemCondition: 'https://schema.org/NewCondition',
-            seller: { '@type': 'Organization', name: 'Vertex Urban Style' },
+            seller: { '@type': 'Organization', name: 'ERAS Streetwear' },
         },
         aggregateRating: product.average_rating > 0 ? {
             '@type': 'AggregateRating',

@@ -66,8 +66,8 @@ export default function CartIndex({ cart }) {
         return (
             <StoreLayout>
                 <Head>
-                    <title>Carrinho — Vertex Urban Style</title>
-                    <meta name="description" content="Seu carrinho de compras na Vertex Urban Style." />
+                    <title>Carrinho — ERAS Streetwear</title>
+                    <meta name="description" content="Seu carrinho de compras na ERAS Streetwear." />
                 </Head>
                 <div className="container-page py-8">
                     <EmptyCart />
@@ -79,8 +79,8 @@ export default function CartIndex({ cart }) {
     return (
         <StoreLayout>
             <Head>
-                <title>Carrinho ({cart.item_count}) — Vertex Urban Style</title>
-                <meta name="description" content="Finalize sua compra na Vertex Urban Style." />
+                <title>Carrinho ({cart.item_count}) — ERAS Streetwear</title>
+                <meta name="description" content="Finalize sua compra na ERAS Streetwear." />
             </Head>
 
             <div className="container-page py-8 lg:py-12">

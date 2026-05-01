@@ -26,8 +26,8 @@ return [
         'token'       => env('MELHOR_ENVIO_TOKEN'),
         'sandbox'     => env('MELHOR_ENVIO_SANDBOX', true),
         'from_cep'    => env('MELHOR_ENVIO_FROM_CEP', '01310100'),
-        'from_name'   => env('MELHOR_ENVIO_FROM_NAME', 'Vertex Urban Style'),
-        'from_email'  => env('MELHOR_ENVIO_FROM_EMAIL', 'logistica@vertexurbanstyle.com.br'),
+        'from_name'   => env('MELHOR_ENVIO_FROM_NAME', 'ERAS Streetwear'),
+        'from_email'  => env('MELHOR_ENVIO_FROM_EMAIL', 'logistica@eras.com.br'),
     ],
 
     /*

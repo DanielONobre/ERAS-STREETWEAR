@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#080d14" />
 
     {{-- SEO dinâmico via Inertia Head --}}
-    <title inertia>{{ config('app.name', 'Vertex Urban Style') }}</title>
+    <title inertia>{{ config('app.name', 'ERAS Streetwear') }}</title>
 
     {{-- Canonical URL (sobrescrito por página via Inertia Head) --}}
     @php
@@ -21,7 +21,7 @@
     <link rel="canonical" href="{{ $baseCanonical }}" />
 
     {{-- Open Graph defaults --}}
-    <meta property="og:site_name" content="Vertex Urban Style" />
+    <meta property="og:site_name" content="ERAS Streetwear" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ $baseCanonical }}" />
     <meta property="og:image" content="{{ asset('images/og-default.jpg') }}" />
@@ -30,7 +30,7 @@
 
     {{-- Twitter Card defaults --}}
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@vertexurban" />
+    <meta name="twitter:site" content="@erasstreetwear" />
     <meta name="twitter:image" content="{{ asset('images/og-default.jpg') }}" />
 
     {{-- Fonts preconnect --}}

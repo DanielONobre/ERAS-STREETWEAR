@@ -16,7 +16,7 @@ const STATUS_BADGE = {
 
 export default function AccountOrders({ orders }) {
     return (
-        <StoreLayout title="Meus pedidos — VERTEX">
+        <StoreLayout title="Meus pedidos — ERAS">
             <AccountLayout active="orders">
                 <h1 className="section-title mb-6">Meus pedidos</h1>
 

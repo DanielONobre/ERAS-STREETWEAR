@@ -113,9 +113,9 @@ export default function Home({
     return (
         <StoreLayout>
             <Head>
-                <title>Vertex Urban Style — Vista sua atitude</title>
+                <title>ERAS Streetwear — Vista sua atitude</title>
                 <meta name="description" content="E-commerce de moda streetwear. Roupas, acessórios e calçados com estilo autêntico." />
-                <meta property="og:title" content="Vertex Urban Style — Vista sua atitude" />
+                <meta property="og:title" content="ERAS Streetwear — Vista sua atitude" />
                 <meta property="og:description" content="Streetwear que fala por você. Peças únicas para quem não segue tendências — cria as suas próprias." />
                 <meta property="og:type" content="website" />
             </Head>
@@ -338,7 +338,7 @@ export default function Home({
             {/* ══ g) INSTAGRAM FEED ═══════════════════════════════════════════════ */}
             <section className="container-page py-20">
                 <div className="text-center mb-10">
-                    <h2 className="section-title">@vertexurbanstyle</h2>
+                    <h2 className="section-title">@erasstreetwear</h2>
                     <p className="section-subtitle mt-2">
                         Siga-nos no Instagram e mostre seu estilo
                     </p>
@@ -348,7 +348,7 @@ export default function Home({
                     {INSTA_PHOTOS.map((src, i) => (
                         <motion.a
                             key={i}
-                            href="https://instagram.com/vertexurbanstyle"
+                            href="https://instagram.com/erasstreetwear"
                             target="_blank"
                             rel="noreferrer"
                             initial={{ opacity: 0, scale: 0.95 }}
@@ -359,7 +359,7 @@ export default function Home({
                         >
                             <img
                                 src={src}
-                                alt={`Post ${i + 1} @vertexurbanstyle`}
+                                alt={`Post ${i + 1} @erasstreetwear`}
                                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                             />
                             {/* Overlay */}
@@ -379,12 +379,12 @@ export default function Home({
 
                 <div className="text-center mt-8">
                     <a
-                        href="https://instagram.com/vertexurbanstyle"
+                        href="https://instagram.com/erasstreetwear"
                         target="_blank"
                         rel="noreferrer"
                         className="btn-outline inline-flex"
                     >
-                        Seguir @vertexurbanstyle
+                        Seguir @erasstreetwear
                     </a>
                 </div>
             </section>

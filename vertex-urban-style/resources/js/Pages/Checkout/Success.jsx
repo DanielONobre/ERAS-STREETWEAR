@@ -88,8 +88,8 @@ export default function CheckoutSuccess({ order }) {
     return (
         <StoreLayout>
             <Head>
-                <title>Pedido #{order.id} confirmado — Vertex Urban Style</title>
-                <meta name="description" content={`Seu pedido #${order.id} foi realizado com sucesso na Vertex Urban Style.`} />
+                <title>Pedido #{order.id} confirmado — ERAS Streetwear</title>
+                <meta name="description" content={`Seu pedido #${order.id} foi realizado com sucesso na ERAS Streetwear.`} />
             </Head>
 
             <div className="container-page py-16 max-w-2xl">

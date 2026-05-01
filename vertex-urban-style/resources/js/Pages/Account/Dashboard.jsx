@@ -16,12 +16,12 @@ const STATUS_BADGE = {
 
 export default function AccountDashboard({ user, recent_orders }) {
     return (
-        <StoreLayout title="Minha conta — VERTEX">
+        <StoreLayout title="Minha conta — ERAS">
             <AccountLayout active="dashboard">
                 {/* Welcome */}
                 <div className="mb-8">
                     <h1 className="section-title">Olá, {user.name.split(' ')[0]}!</h1>
-                    <p className="section-subtitle">Bem-vindo de volta à sua conta VERTEX.</p>
+                    <p className="section-subtitle">Bem-vindo de volta à sua conta ERAS.</p>
                 </div>
 
                 {/* Quick stats */}

@@ -11,7 +11,7 @@ class CouponSeeder extends Seeder
     {
         $coupons = [
             [
-                'code'            => 'VERTEX10',
+                'code'            => 'ERAS10',
                 'type'            => 'percentage',
                 'value'           => 10.00,
                 'min_order_value' => 150.00,
@@ -37,7 +37,7 @@ class CouponSeeder extends Seeder
                 'updated_at'      => now(),
             ],
             [
-                'code'            => 'BEMVINDO20',
+                'code'            => 'ERAS20',
                 'type'            => 'percentage',
                 'value'           => 20.00,
                 'min_order_value' => 0.00,

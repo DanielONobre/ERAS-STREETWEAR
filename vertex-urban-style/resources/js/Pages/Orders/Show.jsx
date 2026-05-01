@@ -16,7 +16,7 @@ export default function OrderShow({ order }) {
     };
 
     return (
-        <AppLayout title={`Pedido ${order.number} — Vertex Urban Style`}>
+        <AppLayout title={`Pedido ${order.number} — ERAS Streetwear`}>
             <div className="container-page py-8 lg:py-12 max-w-3xl">
                 <div className="flex items-center gap-4 mb-8">
                     <Link href={route('orders.index')} className="text-white/40 hover:text-white text-sm">

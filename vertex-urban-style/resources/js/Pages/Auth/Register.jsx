@@ -29,7 +29,7 @@ export default function Register() {
             >
                 <div className="text-center mb-8">
                     <Link href="/">
-                        <span className="font-display text-3xl font-bold text-gradient-brand">VERTEX</span>
+                        <span className="font-display text-3xl font-bold text-gradient-brand">ERAS</span>
                     </Link>
                     <p className="text-white/40 text-sm mt-2">Crie sua conta</p>
                 </div>

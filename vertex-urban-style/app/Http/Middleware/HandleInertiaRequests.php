@@ -63,10 +63,10 @@ class HandleInertiaRequests extends Middleware
             'seo' => fn () => [
                 'canonical'    => $request->url(),
                 'og_url'       => $request->url(),
-                'og_site_name' => 'Vertex Urban Style',
+                'og_site_name' => 'ERAS Streetwear',
                 'og_type'      => 'website',
                 'twitter_card' => 'summary_large_image',
-                'twitter_site' => '@vertexurban',
+                'twitter_site' => '@erasstreetwear',
             ],
         ]);
     }

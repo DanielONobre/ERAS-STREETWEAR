@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>500 — Erro interno — Vertex Urban Style</title>
+    <title>500 — Erro interno — ERAS Streetwear</title>
     <meta name="robots" content="noindex">
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -89,7 +89,7 @@
 <body>
     <div class="glow"></div>
 
-    <a href="/" class="logo">VERTEX<span>.</span></a>
+    <a href="/" class="logo">ERAS<span>.</span></a>
 
     <div class="code">500</div>
 
@@ -101,6 +101,6 @@
         <a href="/" class="btn btn-outline">⌂ Ir para a Home</a>
     </div>
 
-    <footer>© {{ date('Y') }} Vertex Urban Style</footer>
+    <footer>© {{ date('Y') }} ERAS Streetwear</footer>
 </body>
 </html>

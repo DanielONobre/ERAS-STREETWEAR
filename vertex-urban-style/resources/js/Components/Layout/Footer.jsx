@@ -14,7 +14,7 @@ const footerLinks = {
         { label: 'Fale Conosco', href: '#' },
     ],
     'Institucional': [
-        { label: 'Sobre a Vertex', href: '#' },
+        { label: 'Sobre a ERAS', href: '#' },
         { label: 'Sustentabilidade', href: '#' },
         { label: 'Trabalhe Conosco', href: '#' },
         { label: 'Imprensa', href: '#' },
@@ -32,7 +32,7 @@ export default function Footer() {
                     {/* Brand */}
                     <div className="col-span-2 md:col-span-1">
                         <span className="font-display text-2xl font-bold text-gradient-brand">
-                            VERTEX
+                            ERAS
                         </span>
                         <p className="mt-3 text-sm text-white/40 leading-relaxed">
                             Vista sua atitude.<br />
@@ -84,7 +84,7 @@ export default function Footer() {
                 {/* Bottom bar */}
                 <div className="divider mt-10 mb-6" />
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/30">
-                    <p>© {new Date().getFullYear()} Vertex Urban Style. Todos os direitos reservados.</p>
+                    <p>© {new Date().getFullYear()} ERAS Streetwear. Todos os direitos reservados.</p>
                     <div className="flex items-center gap-4">
                         <Link href="#" className="hover:text-white/60 transition-colors">Política de Privacidade</Link>
                         <Link href="#" className="hover:text-white/60 transition-colors">Termos de Uso</Link>

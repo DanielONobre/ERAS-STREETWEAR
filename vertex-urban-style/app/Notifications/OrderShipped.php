@@ -22,7 +22,7 @@ class OrderShipped extends Notification implements ShouldQueue
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-            ->subject('Seu pedido #' . $this->order->id . ' foi enviado! — Vertex Urban Style')
+            ->subject('Seu pedido #' . $this->order->id . ' foi enviado! — ERAS Streetwear')
             ->view('emails.order-shipped', [
                 'order'        => $this->order,
                 'customer'     => $notifiable,

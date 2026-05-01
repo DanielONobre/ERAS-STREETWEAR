@@ -249,7 +249,7 @@ class OrderService
 
         $lines   = [];
         $lines[] = "========================================";
-        $lines[] = "  VERTEX URBAN STYLE — PEDIDO #{$order->id}";
+        $lines[] = "  ERAS STREETWEAR — PEDIDO #{$order->id}";
         $lines[] = "========================================";
         $lines[] = "Data: " . $order->created_at->format('d/m/Y H:i');
         $lines[] = "Cliente: " . ($order->user?->name ?? 'Visitante');

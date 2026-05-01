@@ -28,7 +28,7 @@ export default function ProfileShow({ user, addresses }) {
     };
 
     return (
-        <AppLayout title="Minha Conta — Vertex Urban Style">
+        <AppLayout title="Minha Conta — ERAS Streetwear">
             <div className="container-page py-8 lg:py-12 max-w-2xl">
                 <h1 className="section-title mb-8">Minha Conta</h1>
 

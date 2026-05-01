@@ -109,7 +109,7 @@ export default function AdminSettings({ settings = {}, stats = {} }) {
 
     const { data, setData, post, processing } = useForm({
         // Loja
-        store_name:          settings.store_name ?? 'Vertex Urban Style',
+        store_name:          settings.store_name ?? 'ERAS Streetwear',
         store_email:         settings.store_email ?? '',
         store_phone:         settings.store_phone ?? '',
         store_cnpj:          settings.store_cnpj  ?? '',
@@ -269,10 +269,10 @@ export default function AdminSettings({ settings = {}, stats = {} }) {
                                     <Section title="Redes Sociais">
                                         <div className="space-y-3">
                                             {[
-                                                { key: 'social_instagram', label: 'Instagram', placeholder: '@vertex_urban' },
+                                                { key: 'social_instagram', label: 'Instagram', placeholder: '@erasstreetwear' },
                                                 { key: 'social_facebook',  label: 'Facebook',  placeholder: 'https://facebook.com/...' },
-                                                { key: 'social_twitter',   label: 'X / Twitter', placeholder: '@vertexurban' },
-                                                { key: 'social_tiktok',    label: 'TikTok',    placeholder: '@vertex_urban' },
+                                                { key: 'social_twitter',   label: 'X / Twitter', placeholder: '@erasstreetwear' },
+                                                { key: 'social_tiktok',    label: 'TikTok',    placeholder: '@erasstreetwear' },
                                                 { key: 'social_youtube',   label: 'YouTube',   placeholder: 'https://youtube.com/...' },
                                                 { key: 'social_whatsapp',  label: 'WhatsApp',  placeholder: '5511999999999' },
                                             ].map(({ key, label, placeholder }) => (
@@ -372,11 +372,11 @@ export default function AdminSettings({ settings = {}, stats = {} }) {
                                         <div className="grid grid-cols-2 gap-3">
                                             <div>
                                                 <label className="label">Nome do remetente</label>
-                                                <input type="text" value={data.email_from_name} onChange={e => setData('email_from_name', e.target.value)} className="input" placeholder="Vertex Urban Style" />
+                                                <input type="text" value={data.email_from_name} onChange={e => setData('email_from_name', e.target.value)} className="input" placeholder="ERAS Streetwear" />
                                             </div>
                                             <div>
                                                 <label className="label">E-mail remetente</label>
-                                                <input type="email" value={data.email_from_address} onChange={e => setData('email_from_address', e.target.value)} className="input" placeholder="noreply@vertexurban.com.br" />
+                                                <input type="email" value={data.email_from_address} onChange={e => setData('email_from_address', e.target.value)} className="input" placeholder="noreply@eras.com.br" />
                                             </div>
                                         </div>
                                     </Section>

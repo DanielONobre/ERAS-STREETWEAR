@@ -28,7 +28,7 @@ export default function NotFound() {
                     {/* Logo */}
                     <Link href="/" className="inline-block mb-10">
                         <span className="text-2xl font-display font-black tracking-tight">
-                            VERTEX<span className="text-primary">.</span>
+                            ERAS<span className="text-primary">.</span>
                         </span>
                     </Link>
 
@@ -92,7 +92,7 @@ export default function NotFound() {
 
                 {/* Footer minimal */}
                 <p className="absolute bottom-6 text-xs text-white/20">
-                    © {new Date().getFullYear()} Vertex Urban Style
+                    © {new Date().getFullYear()} ERAS Streetwear
                 </p>
             </div>
         </>

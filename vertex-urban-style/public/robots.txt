@@ -17,4 +17,4 @@ Disallow: /*?*sort=
 Disallow: /*?*page=
 
 # Sitemap
-Sitemap: https://vertexurbanstyle.com.br/sitemap.xml
+Sitemap: https://erasstreetwear.com.br/sitemap.xml

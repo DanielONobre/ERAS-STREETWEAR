@@ -22,7 +22,7 @@ class OrderConfirmed extends Notification implements ShouldQueue
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-            ->subject('Pedido #' . $this->order->id . ' confirmado — Vertex Urban Style')
+            ->subject('Pedido #' . $this->order->id . ' confirmado — ERAS Streetwear')
             ->view('emails.order-confirmed', [
                 'order'    => $this->order,
                 'customer' => $notifiable,

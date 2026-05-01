@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ $subject ?? 'Vertex Urban Style' }}</title>
+    <title>{{ $subject ?? 'ERAS Streetwear' }}</title>
     <style>
         /* Reset */
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -229,8 +229,8 @@
 
         {{-- Header --}}
         <div class="header">
-            <div class="logo">Vertex<span>.</span></div>
-            <div class="tagline">Urban Style</div>
+            <div class="logo">ERAS<span>.</span></div>
+            <div class="tagline">Streetwear</div>
         </div>
 
         {{-- Corpo do email --}}
@@ -251,9 +251,9 @@
                 <a href="{{ config('app.url') }}/contato">Contato</a>
                 <a href="{{ config('app.url') }}/politica-de-privacidade">Privacidade</a>
             </div>
-            <div class="footer-brand">Vertex Urban Style</div>
+            <div class="footer-brand">ERAS Streetwear</div>
             <div class="footer-copy">
-                © {{ date('Y') }} Vertex Urban Style. Todos os direitos reservados.<br />
+                © {{ date('Y') }} ERAS Streetwear. Todos os direitos reservados.<br />
                 São Paulo, SP — CNPJ 00.000.000/0001-00<br />
                 Você está recebendo este e-mail porque realizou uma ação em nossa loja.
             </div>
