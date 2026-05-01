@@ -1,0 +1,96 @@
+import { Link } from '@inertiajs/react';
+
+const footerLinks = {
+    'Loja': [
+        { label: 'Novidades',   href: '/produtos?is_new=1' },
+        { label: 'Promoções',   href: '/produtos?on_sale=1' },
+        { label: 'Bestsellers', href: '/produtos?sort=bestsellers' },
+        { label: 'Coleções',    href: '/produtos' },
+    ],
+    'Atendimento': [
+        { label: 'Central de Ajuda', href: '#' },
+        { label: 'Trocas e Devoluções', href: '#' },
+        { label: 'Rastrear Pedido', href: '#' },
+        { label: 'Fale Conosco', href: '#' },
+    ],
+    'Institucional': [
+        { label: 'Sobre a Vertex', href: '#' },
+        { label: 'Sustentabilidade', href: '#' },
+        { label: 'Trabalhe Conosco', href: '#' },
+        { label: 'Imprensa', href: '#' },
+    ],
+};
+
+export default function Footer() {
+    return (
+        <footer className="bg-dark-100 border-t border-white/[0.06] mt-auto">
+            <div className="container-page py-12 lg:py-16">
+
+                {/* Grid principal */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
+
+                    {/* Brand */}
+                    <div className="col-span-2 md:col-span-1">
+                        <span className="font-display text-2xl font-bold text-gradient-brand">
+                            VERTEX
+                        </span>
+                        <p className="mt-3 text-sm text-white/40 leading-relaxed">
+                            Vista sua atitude.<br />
+                            Streetwear autêntico para quem não segue tendências — cria.
+                        </p>
+
+                        {/* Social */}
+                        <div className="flex gap-3 mt-5">
+                            {[
+                                { name: 'Instagram', icon: 'M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z' },
+                            ].map((social) => (
+                                <a
+                                    key={social.name}
+                                    href="#"
+                                    aria-label={social.name}
+                                    className="w-9 h-9 rounded-lg bg-white/[0.06] flex items-center justify-center
+                                               text-white/40 hover:text-white hover:bg-primary/20 transition-all"
+                                >
+                                    <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+                                        <path d={social.icon} />
+                                    </svg>
+                                </a>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Links */}
+                    {Object.entries(footerLinks).map(([title, links]) => (
+                        <div key={title}>
+                            <h4 className="text-xs font-semibold text-white/30 uppercase tracking-widest mb-4">
+                                {title}
+                            </h4>
+                            <ul className="space-y-2.5">
+                                {links.map((link) => (
+                                    <li key={link.label}>
+                                        <Link
+                                            href={link.href}
+                                            className="text-sm text-white/50 hover:text-white transition-colors"
+                                        >
+                                            {link.label}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Bottom bar */}
+                <div className="divider mt-10 mb-6" />
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/30">
+                    <p>© {new Date().getFullYear()} Vertex Urban Style. Todos os direitos reservados.</p>
+                    <div className="flex items-center gap-4">
+                        <Link href="#" className="hover:text-white/60 transition-colors">Política de Privacidade</Link>
+                        <Link href="#" className="hover:text-white/60 transition-colors">Termos de Uso</Link>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    );
+}

@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Bloquear áreas privadas
+Disallow: /admin
+Disallow: /admin/
+Disallow: /checkout
+Disallow: /checkout/
+Disallow: /minha-conta
+Disallow: /minha-conta/
+Disallow: /entrar
+Disallow: /cadastro
+Disallow: /carrinho
+
+# Bloquear parâmetros de paginação/filtros duplicados
+Disallow: /*?*sort=
+Disallow: /*?*page=
+
+# Sitemap
+Sitemap: https://vertexurbanstyle.com.br/sitemap.xml

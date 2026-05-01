@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Base Layer ─────────────────────────────────────────────────────────── */
+@layer base {
+    :root {
+        --color-primary:       13 148 136;
+        --color-accent:        249 115 22;
+        --color-dark:          8 13 20;
+        --navbar-height:       64px;
+    }
+
+    html {
+        @apply scroll-smooth antialiased;
+        font-feature-settings: 'cv11', 'ss01';
+    }
+
+    body {
+        @apply font-body bg-dark text-white;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-display font-semibold;
+    }
+
+    ::selection {
+        @apply bg-primary/30 text-white;
+    }
+
+    ::-webkit-scrollbar {
+        @apply w-1.5;
+    }
+
+    ::-webkit-scrollbar-track {
+        @apply bg-dark-100;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        @apply bg-primary/50 rounded-full;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        @apply bg-primary;
+    }
+}
+
+/* ─── Component Layer ────────────────────────────────────────────────────── */
+@layer components {
+
+    /* ── Botões ─────────────────────────────────────────────────── */
+    .btn {
+        @apply inline-flex items-center justify-center gap-2 rounded-lg
+               px-5 py-2.5 text-sm font-medium font-body
+               transition-all duration-200 focus-visible:outline-none
+               focus-visible:ring-2 focus-visible:ring-offset-2
+               focus-visible:ring-offset-dark disabled:opacity-50
+               disabled:pointer-events-none select-none;
+    }
+
+    .btn-primary {
+        @apply btn bg-primary text-white hover:bg-primary-700
+               focus-visible:ring-primary
+               hover:shadow-glow-primary active:scale-[0.98];
+    }
+
+    .btn-accent {
+        @apply btn bg-accent text-white hover:bg-accent-600
+               focus-visible:ring-accent
+               hover:shadow-glow-accent active:scale-[0.98];
+    }
+
+    .btn-outline {
+        @apply btn border border-white/20 text-white/80 bg-transparent
+               hover:bg-white/10 hover:border-white/40 hover:text-white
+               focus-visible:ring-white/30;
+    }
+
+    .btn-ghost {
+        @apply btn text-white/70 hover:text-white hover:bg-white/10
+               focus-visible:ring-white/20;
+    }
+
+    .btn-danger {
+        @apply btn bg-red-600 text-white hover:bg-red-700
+               focus-visible:ring-red-500;
+    }
+
+    .btn-sm {
+        @apply px-3 py-1.5 text-xs;
+    }
+
+    .btn-lg {
+        @apply px-7 py-3.5 text-base;
+    }
+
+    .btn-icon {
+        @apply btn p-2.5;
+    }
+
+    /* ── Cards ──────────────────────────────────────────────────── */
+    .card {
+        @apply bg-dark-100 border border-white/[0.06] rounded-2xl shadow-card;
+    }
+
+    .card-hover {
+        @apply card transition-all duration-300
+               hover:border-primary/30 hover:shadow-card-hover
+               hover:-translate-y-0.5;
+    }
+
+    /* ── Inputs ─────────────────────────────────────────────────── */
+    .input {
+        @apply form-input w-full rounded-xl bg-dark-100 border border-white/10
+               text-white placeholder-white/30 text-sm
+               px-4 py-2.5 transition-all duration-200
+               focus:border-primary focus:ring-1 focus:ring-primary
+               focus:outline-none;
+    }
+
+    .input-error {
+        @apply border-red-500 focus:border-red-500 focus:ring-red-500;
+    }
+
+    .label {
+        @apply block text-sm font-medium text-white/70 mb-1.5;
+    }
+
+    .field-error {
+        @apply text-xs text-red-400 mt-1.5 flex items-center gap-1;
+    }
+
+    /* ── Badges ─────────────────────────────────────────────────── */
+    .badge {
+        @apply inline-flex items-center gap-1 rounded-full px-2.5 py-0.5
+               text-xs font-medium;
+    }
+
+    .badge-primary { @apply badge bg-primary/20 text-primary-300; }
+    .badge-accent   { @apply badge bg-accent/20  text-accent-300;  }
+    .badge-success  { @apply badge bg-green-500/20 text-green-400; }
+    .badge-warning  { @apply badge bg-yellow-500/20 text-yellow-400; }
+    .badge-danger   { @apply badge bg-red-500/20 text-red-400;     }
+    .badge-neutral  { @apply badge bg-white/10 text-white/60;      }
+
+    /* ── Tags de produto ─────────────────────────────────────────── */
+    .product-tag-new    { @apply badge-accent; }
+    .product-tag-sale   { @apply badge-danger; }
+    .product-tag-hot    { @apply badge bg-rose-500/20 text-rose-300; }
+
+    /* ── Shimmer (skeleton loader) ───────────────────────────────── */
+    .skeleton {
+        @apply bg-white/[0.06] rounded-lg animate-shimmer
+               bg-[length:200%_100%]
+               bg-shimmer-gradient;
+    }
+
+    /* ── Dividers ───────────────────────────────────────────────── */
+    .divider {
+        @apply w-full h-px bg-white/[0.06];
+    }
+
+    /* ── Page container ─────────────────────────────────────────── */
+    .container-page {
+        @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+    }
+
+    /* ── Product grid ───────────────────────────────────────────── */
+    .product-grid {
+        @apply grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6;
+    }
+
+    /* ── Section title ──────────────────────────────────────────── */
+    .section-title {
+        @apply font-display text-2xl md:text-3xl font-bold text-white;
+    }
+
+    .section-subtitle {
+        @apply text-white/50 text-sm md:text-base mt-1;
+    }
+}
+
+/* ─── Utility Layer ──────────────────────────────────────────────────────── */
+@layer utilities {
+    .text-gradient-primary {
+        @apply bg-gradient-to-r from-primary-400 to-primary-600
+               bg-clip-text text-transparent;
+    }
+
+    .text-gradient-accent {
+        @apply bg-gradient-to-r from-accent-400 to-accent-600
+               bg-clip-text text-transparent;
+    }
+
+    .text-gradient-brand {
+        @apply bg-gradient-to-r from-primary-400 via-teal-300 to-accent-400
+               bg-clip-text text-transparent;
+    }
+
+    .glass {
+        @apply backdrop-blur-xl bg-white/[0.04] border border-white/[0.08];
+    }
+
+    .glass-dark {
+        @apply backdrop-blur-xl bg-dark/80 border border-white/[0.06];
+    }
+
+    .mask-fade-bottom {
+        -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+        mask-image:         linear-gradient(to bottom, black 60%, transparent 100%);
+    }
+
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+    .pt-navbar { padding-top: var(--navbar-height); }
+    .mt-navbar  { margin-top:  var(--navbar-height); }
+}

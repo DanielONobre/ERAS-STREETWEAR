@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(php --version)",
+      "Bash(composer --version)",
+      "Bash(npm --version)",
+      "Bash(where php:*)",
+      "Bash(ls /c/php*)",
+      "Read(//c/xampp/**)",
+      "Read(//c/laragon/bin/**)",
+      "Read(//c/Users/danie/.config/herd/bin//**)",
+      "Read(//c/Users/danie/AppData/Local/**)",
+      "Bash(cmd /c \"where php\")",
+      "Bash(powershell -command \"Get-Command php -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Source\")",
+      "Bash(cmd /c \"where composer\")",
+      "Bash(cmd /c \"where node\")",
+      "Bash(cmd /c \"where npm\")",
+      "Read(//c//**)",
+      "Bash(powershell -command \"Get-ChildItem 'C:\\\\Users\\\\danie' -Filter 'php*' -Recurse -Depth 4 -ErrorAction SilentlyContinue | Select-Object FullName -First 10\" 2>/dev/null)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(node_modules/.bin/vite build:*)",
+      "Bash(cmd /c \"cd C:\\\\Plano-E-commerce\\\\vertex-urban-style && npm run build\" 2>&1)",
+      "Bash(cmd /c \"cd /d C:\\\\Plano-E-commerce\\\\vertex-urban-style && npm run build 2>&1\")",
+      "Bash(powershell -Command \"Set-Location 'C:\\\\Plano-E-commerce\\\\vertex-urban-style'; npm run build\" 2>&1)",
+      "Bash(Select-String -Pattern \"built|error|warning\" -NotMatch:$false)",
+      "Bash(grep -rn \"statusHistory\\\\|->number\\\\b\\\\|sale_price\\\\|cover_image\\\\|is_new\\\\|rating_avg\\\\|sales_count\\\\|price_modifier\\\\|manage_stock\\\\|show_in_menu\\\\|coupon_code\\\\b\\\\|payment_url\\\\|shipping_address\\\\|OrderStatusHistory\\\\|product_sku\\\\|unit_price\\\\|variant_info\\\\b\" C:/Plano-E-commerce/vertex-urban-style/app/ --include=*.php)",
+      "Bash(php artisan:*)",
+      "Bash(cmd /c \"php artisan route:list 2>&1\")",
+      "Bash(cmd /c \"php artisan route:list --columns=method,uri,name 2>&1\")",
+      "Bash(grep -E \"\\\\.\\(config|env|json|js\\)$\")",
+      "Bash(ls:*)",
+      "Bash(grep:*)"
+    ]
+  }
+}
