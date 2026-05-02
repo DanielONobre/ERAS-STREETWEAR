@@ -54,8 +54,8 @@ class ProductSeeder extends Seeder
                 'short_desc'    => 'Oversized 220g. Silk aquoso. Numerada. DROP 01.',
                 'is_featured'   => true,
                 'images'        => [
-                    ['url' => 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800', 'alt' => 'Camiseta Asfalto 02 — Frente'],
-                    ['url' => 'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800', 'alt' => 'Camiseta Asfalto 02 — Costas'],
+                    ['url' => '/images/products/camiseta-asfalto-02-001.webp', 'alt' => 'Camiseta Asfalto 02 — Frente'],
+                    ['url' => '/images/products/camiseta-asfalto-02-002.webp', 'alt' => 'Camiseta Asfalto 02 — Costas'],
                 ],
                 'colors'        => ['Concreto', 'Preto'],
                 'meta_title'    => 'Camiseta Asfalto 02 — DROP 01 ERAS Streetwear',
@@ -74,7 +74,8 @@ class ProductSeeder extends Seeder
                 'short_desc'    => 'Fleece 380g. Capuz duplo. Silk descentralizado.',
                 'is_featured'   => true,
                 'images'        => [
-                    ['url' => 'https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=800', 'alt' => 'Moletom Brasa Capuz'],
+                    ['url' => '/images/products/moletom-brasa-capuz-001.webp', 'alt' => 'Moletom Brasa Capuz — Frente'],
+                    ['url' => '/images/products/moletom-brasa-capuz-002.webp', 'alt' => 'Moletom Brasa Capuz — Detalhe'],
                 ],
                 'colors'        => ['Preto', 'Concreto'],
                 'meta_title'    => 'Moletom Brasa Capuz — DROP 01 ERAS',
@@ -93,7 +94,8 @@ class ProductSeeder extends Seeder
                 'short_desc'    => 'Ripstop wide-leg. 6 bolsos. Webbing lateral. Barra raw.',
                 'is_featured'   => true,
                 'images'        => [
-                    ['url' => 'https://images.unsplash.com/photo-1548126032-079a0fb0099d?w=800', 'alt' => 'Calça Cargo Viaduto'],
+                    ['url' => '/images/products/calca-cargo-viaduto-001.webp', 'alt' => 'Calça Cargo Viaduto — Frente'],
+                    ['url' => '/images/products/calca-cargo-viaduto-002.webp', 'alt' => 'Calça Cargo Viaduto — Detalhe bolso'],
                 ],
                 'colors'        => ['Concreto', 'Preto'],
                 'meta_title'    => 'Calça Cargo Viaduto — DROP 01 ERAS',
@@ -112,7 +114,8 @@ class ProductSeeder extends Seeder
                 'short_desc'    => 'Malha 200g. Gráfico metrô. Algodão penteado.',
                 'is_featured'   => false,
                 'images'        => [
-                    ['url' => 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800', 'alt' => 'Camiseta Linha de Trem'],
+                    ['url' => '/images/products/camiseta-linha-de-trem-001.webp', 'alt' => 'Camiseta Linha de Trem — Frente'],
+                    ['url' => '/images/products/camiseta-linha-de-trem-002.webp', 'alt' => 'Camiseta Linha de Trem — Costas'],
                 ],
                 'colors'        => ['Preto', 'Areia'],
                 'meta_title'    => 'Camiseta Linha de Trem — DROP 01 ERAS',
@@ -131,7 +134,8 @@ class ProductSeeder extends Seeder
                 'short_desc'    => 'Nylon DWR. Fleece removível. Costuras termossoldadas.',
                 'is_featured'   => true,
                 'images'        => [
-                    ['url' => 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800', 'alt' => 'Jaqueta Blocão'],
+                    ['url' => '/images/products/jaqueta-blocao-001.webp', 'alt' => 'Jaqueta Blocão — Frente'],
+                    ['url' => '/images/products/jaqueta-blocao-002.webp', 'alt' => 'Jaqueta Blocão — Detalhe'],
                 ],
                 'colors'        => ['Preto', 'Concreto'],
                 'meta_title'    => 'Jaqueta Blocão — DROP 01 ERAS',
@@ -150,7 +154,8 @@ class ProductSeeder extends Seeder
                 'short_desc'    => 'Trucker 5 painéis. Bordado tonal. Snapback.',
                 'is_featured'   => false,
                 'images'        => [
-                    ['url' => 'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=800', 'alt' => 'Boné Trucker Esquina'],
+                    ['url' => '/images/products/bone-trucker-esquina-001.webp', 'alt' => 'Boné Trucker Esquina — Frente'],
+                    ['url' => '/images/products/bone-trucker-esquina-002.webp', 'alt' => 'Boné Trucker Esquina — Lateral'],
                 ],
                 'colors'        => ['Preto', 'Areia'],
                 'meta_title'    => 'Boné Trucker Esquina — DROP 01 ERAS',
@@ -169,7 +174,8 @@ class ProductSeeder extends Seeder
                 'short_desc'    => 'Viscolinho all-over sublimação. Corte oversized.',
                 'is_featured'   => false,
                 'images'        => [
-                    ['url' => 'https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=800', 'alt' => 'Camisa Manga Curta Quintal'],
+                    ['url' => '/images/products/camisa-manga-curta-quintal-001.webp', 'alt' => 'Camisa Manga Curta Quintal — Frente'],
+                    ['url' => '/images/products/camisa-manga-curta-quintal-002.webp', 'alt' => 'Camisa Manga Curta Quintal — Costas'],
                 ],
                 'colors'        => ['Concreto', 'Brasa'],
                 'meta_title'    => 'Camisa Quintal — DROP 01 ERAS',
@@ -188,7 +194,8 @@ class ProductSeeder extends Seeder
                 'short_desc'    => 'Sarja stonewashed. Abaixo do joelho. Barra revirada.',
                 'is_featured'   => false,
                 'images'        => [
-                    ['url' => 'https://images.unsplash.com/photo-1591195853828-11db59a44f43?w=800', 'alt' => 'Bermuda Lajota'],
+                    ['url' => '/images/products/bermuda-lajota-001.webp', 'alt' => 'Bermuda Lajota — Frente'],
+                    ['url' => '/images/products/bermuda-lajota-002.webp', 'alt' => 'Bermuda Lajota — Detalhe barra'],
                 ],
                 'colors'        => ['Concreto', 'Preto'],
                 'meta_title'    => 'Bermuda Lajota — DROP 01 ERAS',
@@ -207,7 +214,8 @@ class ProductSeeder extends Seeder
                 'short_desc'    => 'Malha 240g. Silk alto-relevo. Logo ERAS.',
                 'is_featured'   => true,
                 'images'        => [
-                    ['url' => 'https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800', 'alt' => 'Camiseta Brasa Logo'],
+                    ['url' => '/images/products/camiseta-brasa-logo-001.webp', 'alt' => 'Camiseta Brasa Logo — Frente'],
+                    ['url' => '/images/products/camiseta-brasa-logo-002.webp', 'alt' => 'Camiseta Brasa Logo — Detalhe silk'],
                 ],
                 'colors'        => ['Preto', 'Brasa'],
                 'meta_title'    => 'Camiseta Brasa Logo — DROP 01 ERAS',
@@ -226,7 +234,8 @@ class ProductSeeder extends Seeder
                 'short_desc'    => 'Fleece 350g francês. Bordado contraste. Crewneck limpo.',
                 'is_featured'   => false,
                 'images'        => [
-                    ['url' => 'https://images.unsplash.com/photo-1542327897-d73f4005b533?w=800', 'alt' => 'Moletom Crewneck Esquina'],
+                    ['url' => '/images/products/moletom-crewneck-esquina-001.webp', 'alt' => 'Moletom Crewneck Esquina — Frente'],
+                    ['url' => '/images/products/moletom-crewneck-esquina-002.webp', 'alt' => 'Moletom Crewneck Esquina — Detalhe bordado'],
                 ],
                 'colors'        => ['Concreto', 'Preto'],
                 'meta_title'    => 'Moletom Crewneck Esquina — DROP 01 ERAS',
@@ -245,7 +254,8 @@ class ProductSeeder extends Seeder
                 'short_desc'    => 'Sarja elástica wide-leg. Prega frontal. Fivela lateral.',
                 'is_featured'   => false,
                 'images'        => [
-                    ['url' => 'https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=800', 'alt' => 'Calça Wide Leg Avenida'],
+                    ['url' => '/images/products/calca-wide-leg-avenida-001.webp', 'alt' => 'Calça Wide Leg Avenida — Frente'],
+                    ['url' => '/images/products/calca-wide-leg-avenida-002.webp', 'alt' => 'Calça Wide Leg Avenida — Detalhe cintura'],
                 ],
                 'colors'        => ['Concreto', 'Preto'],
                 'meta_title'    => 'Calça Wide Leg Avenida — DROP 01 ERAS',
@@ -264,7 +274,8 @@ class ProductSeeder extends Seeder
                 'short_desc'    => 'Pack 3 pares. Algodão egípcio. Embalagem numerada.',
                 'is_featured'   => false,
                 'images'        => [
-                    ['url' => 'https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=800', 'alt' => 'Meia Pacote Drop 01'],
+                    ['url' => '/images/products/meia-pacote-drop-01-001.webp', 'alt' => 'Meia Pacote Drop 01 — Pack'],
+                    ['url' => '/images/products/meia-pacote-drop-01-002.webp', 'alt' => 'Meia Pacote Drop 01 — Detalhe logo'],
                 ],
                 'colors'        => ['Preto', 'Concreto'],
                 'meta_title'    => 'Meia Pacote Drop 01 — ERAS',
