@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('user_agent', 500)->nullable();
             $table->timestamp('created_at')->useCurrent();
 
-            $table->index(['subject_type', 'subject_id']);
             $table->index('action');
             $table->index('created_at');
         });

@@ -38,6 +38,7 @@
     34 => 'Pest\\Laravel\\PestServiceProvider',
     35 => 'Spatie\\Sitemap\\SitemapServiceProvider',
     36 => 'Tighten\\Ziggy\\ZiggyServiceProvider',
+    37 => 'App\\Providers\\AppServiceProvider',
   ),
   'eager' => 
   array (
@@ -63,6 +64,7 @@
     19 => 'Pest\\Laravel\\PestServiceProvider',
     20 => 'Spatie\\Sitemap\\SitemapServiceProvider',
     21 => 'Tighten\\Ziggy\\ZiggyServiceProvider',
+    22 => 'App\\Providers\\AppServiceProvider',
   ),
   'deferred' => 
   array (

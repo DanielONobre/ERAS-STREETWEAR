@@ -226,6 +226,44 @@ As cores atuais usam as chaves `primary`, `accent`, `dark` — **não há nenhum
 
 ---
 
+## 6. DÉBITOS TÉCNICOS — PÓS-REBRAND (Sub-fase 1.2)
+
+### 6.1 Migration `activity_logs` — índice duplicado (CORRIGIDO)
+
+**Arquivo:** `database/migrations/2026_01_01_000020_create_activity_logs_table.php`
+
+**Causa:** `$table->morphs('subject')` cria automaticamente um índice composto em `(subject_type, subject_id)` com o nome `activity_logs_subject_type_subject_id_index`. A migration também declarava `$table->index(['subject_type', 'subject_id'])` manualmente, gerando um segundo índice de nome idêntico → `SQLSTATE[42000]: 1061 Duplicate key name`.
+
+**Correção aplicada (Sub-fase 1.2):** Removida a linha `$table->index(['subject_type', 'subject_id'])` (o índice automático do `morphs()` é suficiente). Os índices em `action` e `created_at` foram mantidos.
+
+**Outras migrations com padrão similar:** Nenhuma — apenas `_000020` usa `morphs()` em todo o projeto.
+
+---
+
+### 6.2 Porta 8000 reservada pelo Windows — workaround aplicado
+
+**Causa:** Hyper-V / Docker Desktop reserva o range 8000–8010 no Windows. `php artisan serve` falha ao tentar bind nessas portas.
+
+**Workaround aplicado (Sub-fase 1.2):** `.env` atualizado com `APP_URL=http://localhost:9000`. Iniciar servidor com:
+```
+php artisan serve --port=9000
+```
+
+**Fix permanente (não aplicado):** Liberar o range via PowerShell admin:
+```
+net stop winnat && net start winnat
+```
+
+**Arquivos alterados:** apenas `.env` (linha `APP_URL`). Sem referências a `:8000` em `config/`, `vite.config.js`, nem em JSX/PHP.
+
+---
+
+### 6.3 Vite circular chunk warning (PENDENTE)
+
+Circular dependency warning entre chunks do build Vite. Não causa falha no build. Investigar e corrigir em sub-fase futura.
+
+---
+
 ## OBSERVAÇÕES PARA SUB-FASE 1.2
 
 1. **Não existem tokens `vertex-*`** no Tailwind — a instrução de coexistência se aplica aos tokens `primary`/`accent` atuais, que serão substituídos gradualmente pelos `eras-*`.

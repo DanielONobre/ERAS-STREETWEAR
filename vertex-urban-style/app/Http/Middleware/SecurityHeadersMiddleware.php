@@ -12,6 +12,11 @@ class SecurityHeadersMiddleware
     {
         $response = $next($request);
 
+        // Skip CSP em ambiente local para permitir Vite dev server (HMR, inline nonces, fontes data:)
+        if (app()->environment('local')) {
+            return $response;
+        }
+
         $response->headers->set('X-Frame-Options', 'SAMEORIGIN');
         $response->headers->set('X-Content-Type-Options', 'nosniff');
         $response->headers->set('X-XSS-Protection', '1; mode=block');
