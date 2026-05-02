@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Notifications\WelcomeEmail;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -31,6 +32,8 @@ class RegisterController extends Controller
         $user = User::create($validated);
 
         event(new Registered($user));
+
+        $user->notify(new WelcomeEmail());
 
         Auth::login($user);
 

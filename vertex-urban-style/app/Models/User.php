@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Notifications\PasswordReset;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -98,5 +99,10 @@ class User extends Authenticatable implements MustVerifyEmail
     public function hasWishlisted(int $productId): bool
     {
         return $this->wishlists()->where('product_id', $productId)->exists();
+    }
+
+    public function sendPasswordResetNotification($token): void
+    {
+        $this->notify(new PasswordReset($token));
     }
 }

@@ -1264,3 +1264,500 @@
 #68 C:/ERAS-STREETWEAR/vertex-urban-style/public/index.php(20): Illuminate/Foundation/Application->handleRequest(Object(Illuminate/Http/Request))
 #69 {main}
 "} 
+[2026-05-02 08:29:50] local.ERROR: Serialization of 'class@anonymous' is not allowed {"exception":"[object] (Exception(code: 0): Serialization of 'class@anonymous' is not allowed at C:/ERAS-STREETWEAR/vertex-urban-style/vendor/laravel/framework/src/Illuminate/Queue/Queue.php:160)
+[stacktrace]
+#0 C:/ERAS-STREETWEAR/vertex-urban-style/vendor/laravel/framework/src/Illuminate/Queue/Queue.php(160): serialize(Object(Illuminate/Notifications/SendQueuedNotifications))
+#1 C:/ERAS-STREETWEAR/vertex-urban-style/vendor/laravel/framework/src/Illuminate/Queue/Queue.php(129): Illuminate/Queue/Queue->createObjectPayload(Object(Illuminate/Notifications/SendQueuedNotifications), 'default')
+#2 C:/ERAS-STREETWEAR/vertex-urban-style/vendor/laravel/framework/src/Illuminate/Queue/Queue.php(107): Illuminate/Queue/Queue->createPayloadArray(Object(Illuminate/Notifications/SendQueuedNotifications), 'default', '')
+#3 C:/ERAS-STREETWEAR/vertex-urban-style/vendor/laravel/framework/src/Illuminate/Queue/DatabaseQueue.php(95): Illuminate/Queue/Queue->createPayload(Object(Illuminate/Notifications/SendQueuedNotifications), 'default', '')
+#4 C:/ERAS-STREETWEAR/vertex-urban-style/vendor/laravel/framework/src/Illuminate/Bus/Dispatcher.php(244): Illuminate/Queue/DatabaseQueue->push(Object(Illuminate/Notifications/SendQueuedNotifications), '', NULL)
+#5 C:/ERAS-STREETWEAR/vertex-urban-style/vendor/laravel/framework/src/Illuminate/Bus/Dispatcher.php(228): Illuminate/Bus/Dispatcher->pushCommandToQueue(Object(Illuminate/Queue/DatabaseQueue), Object(Illuminate/Notifications/SendQueuedNotifications))
+#6 C:/ERAS-STREETWEAR/vertex-urban-style/vendor/laravel/framework/src/Illuminate/Bus/Dispatcher.php(77): Illuminate/Bus/Dispatcher->dispatchToQueue(Object(Illuminate/Notifications/SendQueuedNotifications))
+#7 C:/ERAS-STREETWEAR/vertex-urban-style/vendor/laravel/framework/src/Illuminate/Notifications/NotificationSender.php(229): Illuminate/Bus/Dispatcher->dispatch(Object(Illuminate/Notifications/SendQueuedNotifications))
+#8 C:/ERAS-STREETWEAR/vertex-urban-style/vendor/laravel/framework/src/Illuminate/Notifications/NotificationSender.php(76): Illuminate/Notifications/NotificationSender->queueNotification(Array, Object(App/Notifications/WelcomeEmail))
+#9 C:/ERAS-STREETWEAR/vertex-urban-style/vendor/laravel/framework/src/Illuminate/Notifications/ChannelManager.php(39): Illuminate/Notifications/NotificationSender->send(Array, Object(App/Notifications/WelcomeEmail))
+#10 C:/ERAS-STREETWEAR/vertex-urban-style/vendor/laravel/framework/src/Illuminate/Notifications/RoutesNotifications.php(18): Illuminate/Notifications/ChannelManager->send(Object(class@anonymous), Object(App/Notifications/WelcomeEmail))
+#11 C:/ERAS-STREETWEAR/vertex-urban-style/app/Console/Commands/TestEmails.php(38): class@anonymous->notify(Object(App/Notifications/WelcomeEmail))
+#12 C:/ERAS-STREETWEAR/vertex-urban-style/app/Console/Commands/TestEmails.php(57): App/Console/Commands/TestEmails->{closure:App/Console/Commands/TestEmails::handle():38}()
+#13 C:/ERAS-STREETWEAR/vertex-urban-style/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App/Console/Commands/TestEmails->handle()
+#14 C:/ERAS-STREETWEAR/vertex-urban-style/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#15 C:/ERAS-STREETWEAR/vertex-urban-style/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(95): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#16 C:/ERAS-STREETWEAR/vertex-urban-style/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Array, Object(Closure))
+#17 C:/ERAS-STREETWEAR/vertex-urban-style/vendor/laravel/framework/src/Illuminate/Container/Container.php(696): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Array, Array, NULL)
+#18 C:/ERAS-STREETWEAR/vertex-urban-style/vendor/laravel/framework/src/Illuminate/Console/Command.php(213): Illuminate/Container/Container->call(Array)
+#19 C:/ERAS-STREETWEAR/vertex-urban-style/vendor/symfony/console/Command/Command.php(341): Illuminate/Console/Command->execute(Object(Symfony/Component/Console/Input/ArgvInput), Object(Illuminate/Console/OutputStyle))
+#20 C:/ERAS-STREETWEAR/vertex-urban-style/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Symfony/Component/Console/Command/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Illuminate/Console/OutputStyle))
+#21 C:/ERAS-STREETWEAR/vertex-urban-style/vendor/symfony/console/Application.php(1117): Illuminate/Console/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#22 C:/ERAS-STREETWEAR/vertex-urban-style/vendor/symfony/console/Application.php(356): Symfony/Component/Console/Application->doRunCommand(Object(App/Console/Commands/TestEmails), Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#23 C:/ERAS-STREETWEAR/vertex-urban-style/vendor/symfony/console/Application.php(195): Symfony/Component/Console/Application->doRun(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#24 C:/ERAS-STREETWEAR/vertex-urban-style/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony/Component/Console/Application->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#25 C:/ERAS-STREETWEAR/vertex-urban-style/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#26 C:/ERAS-STREETWEAR/vertex-urban-style/artisan(11): Illuminate/Foundation/Application->handleCommand(Object(Symfony/Component/Console/Input/ArgvInput))
+#27 {main}
+"} 
+[2026-05-02 08:35:37] local.DEBUG: From: ERAS Streetwear <noreply@eras.com.br>
+To: admin@eras.com.br
+Subject: Bem-vindo =?utf-8?Q?=C3=A0?= ERAS Streetwear
+MIME-Version: 1.0
+Date: Sat, 02 May 2026 08:35:36 -0300
+Message-ID: <632e70312485621cb02de7bac9ded782@eras.com.br>
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Bem-vindo</title>
+    <style>
+        /* Google Fonts — carrega em clientes que suportam */
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+        /* Reset de email */
+        body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+        table { border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+        table td { border-collapse: collapse; }
+        img { -ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; }
+
+        body {
+            margin: 0; padding: 0;
+            background-color: #0F0F0F;
+            font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+            color: #F5F1EA;
+        }
+
+        a { color: #C8932E; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* ─── Classes usadas pelas views filhas ───────────────────────── */
+        .greeting {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            color: #F5F1EA;
+            margin-bottom: 16px;
+            font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+        }
+        .text {
+            font-size: 15px;
+            line-height: 1.75;
+            color: #AAAAAA;
+            margin-bottom: 16px;
+        }
+        .btn-wrap {
+            text-align: center;
+            margin: 32px 0;
+        }
+        /* Botão como tabela para máxima compatibilidade */
+        .btn {
+            display: inline-block;
+            background-color: #C8932E;
+            color: #0F0F0F !important;
+            font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 14px 36px;
+            text-decoration: none !important;
+        }
+        .btn:hover { background-color: #A07524; }
+        .btn-accent { background-color: #C8932E; }
+        .info-box {
+            background-color: #222222;
+            border-left: 4px solid #C8932E;
+            padding: 20px 24px;
+            margin: 24px 0;
+        }
+        .info-box.warning { border-left-color: #C8932E; }
+        .info-box .label {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #666666;
+            margin-bottom: 6px;
+        }
+        .info-box .value {
+            font-size: 15px;
+            font-weight: 600;
+            color: #F5F1EA;
+        }
+        .order-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            font-size: 14px;
+        }
+        .order-table th {
+            background-color: #222222;
+            color: #666666;
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 10px 14px;
+            text-align: left;
+        }
+        .order-table td {
+            padding: 12px 14px;
+            color: #AAAAAA;
+            border-bottom: 1px solid #222222;
+        }
+        .order-table tr:last-child td { border-bottom: none; }
+        .order-table .total-row td {
+            font-weight: 700;
+            color: #C8932E;
+            font-size: 15px;
+        }
+        .divider {
+            border: none;
+            border-top: 1px solid #222222;
+            margin: 24px 0;
+        }
+        .tracking-code {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #222222;
+            color: #C8932E;
+            padding: 10px 16px;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            display: inline-block;
+            margin: 8px 0;
+        }
+
+        @media (max-width: 480px) {
+            .email-container { width: 100% !important; }
+            .email-body { padding: 24px 20px !important; }
+        }
+    </style>
+</head>
+<body style="margin:0; padding:0; background-color:#0F0F0F;">
+
+<!-- Wrapper externo -->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+       style="background-color:#0F0F0F; padding:40px 16px;">
+    <tr>
+        <td align="center">
+
+            <!-- Container do email — max 600px -->
+            <table role="presentation" class="email-container" width="600" cellpadding="0" cellspacing="0" border="0"
+                   style="max-width:600px; width:100%; background-color:#1A1A1A; border:1px solid #222222;">
+
+                <!-- Header -->
+                <tr>
+                    <td align="center"
+                        style="background-color:#0F0F0F; padding:32px 40px; border-bottom:2px solid #C8932E;">
+                        <div style="font-family:'Space Grotesk','Helvetica Neue',Arial,sans-serif;
+                                    font-size:28px; font-weight:700; letter-spacing:0.3em;
+                                    text-transform:uppercase; color:#F5F1EA; line-height:1;">
+                            ERAS<span style="color:#C8932E;">.</span>
+                        </div>
+                        <div style="font-family:'Space Grotesk','Helvetica Neue',Arial,sans-serif;
+                                    font-size:10px; letter-spacing:0.4em; text-transform:uppercase;
+                                    color:#4A4A4A; margin-top:6px;">
+                            STREETWEAR · BRASIL · DROP LIMITADO
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- Conteúdo da view filha -->
+                <tr>
+                    <td class="email-body" style="padding:40px;">
+                            <div class="greeting">BEM-VINDO</div>
+    <p class="text">
+        <strong style="color:#F5F1EA;">ERAS Admin</strong>, agora você é da casa.
+    </p>
+    <p class="text">
+        ERAS é streetwear autoral brasileiro. Drops limitados, tecidos selecionados,
+        peças que não vão estar em todo lugar.
+    </p>
+
+    <div class="info-box">
+        <div class="label">Drop atual</div>
+        <div class="value">CONCRETO E BRASA — 12 peças, edição numerada, enquanto durar.</div>
+    </div>
+
+    <div class="btn-wrap">
+        <a href="http://localhost:8080/produtos" class="btn">
+            VER CATÁLOGO
+        </a>
+    </div>
+
+    <hr class="divider" />
+    <p class="text" style="font-size:13px; color:#666666;">
+        Próximo drop, você fica sabendo primeiro.
+    </p>
+                    </td>
+                </tr>
+
+                <!-- Footer -->
+                <tr>
+                    <td style="background-color:#0F0F0F; padding:28px 40px;
+                               border-top:1px solid #222222; text-align:center;">
+                        <div style="margin-bottom:14px;">
+                            <a href="http://localhost:8080"
+                               style="color:#666666; font-size:11px; text-decoration:none; margin:0 8px;">Loja</a>
+                            <a href="http://localhost:8080/minha-conta/pedidos"
+                               style="color:#666666; font-size:11px; text-decoration:none; margin:0 8px;">Meus Pedidos</a>
+                            <a href="http://localhost:8080/manifesto"
+                               style="color:#666666; font-size:11px; text-decoration:none; margin:0 8px;">Manifesto</a>
+                            <a href="http://localhost:8080/politica-de-privacidade"
+                               style="color:#666666; font-size:11px; text-decoration:none; margin:0 8px;">Privacidade</a>
+                        </div>
+                        <div style="font-family:'Space Grotesk','Helvetica Neue',Arial,sans-serif;
+                                    font-size:11px; color:#333333; line-height:1.8;">
+                            © 2026 ERAS STREETWEAR. Drop limitado, atitude ilimitada.<br />
+                            São Paulo, SP — CNPJ XX.XXX.XXX/0001-XX<br />
+                            Você recebeu este email por ter realizado uma ação em nossa loja.
+                        </div>
+                        <div style="margin-top:14px; font-family:'Space Grotesk','Helvetica Neue',Arial,sans-serif;
+                                    font-size:9px; letter-spacing:0.25em; text-transform:uppercase; color:#2A2A2A;">
+                            ENGINEERED BY VAXON
+                        </div>
+                    </td>
+                </tr>
+
+            </table>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
+  
+[2026-05-02 08:35:38] local.DEBUG: From: ERAS Streetwear <noreply@eras.com.br>
+To: admin@eras.com.br
+Subject: =?utf-8?Q?Voc=C3=AA_t=C3=A1?= na lista =?utf-8?Q?=E2=80=94?= ERAS
+ Streetwear
+MIME-Version: 1.0
+Date: Sat, 02 May 2026 08:35:38 -0300
+Message-ID: <c6379b65beb3679b381e0ff683b5a54f@eras.com.br>
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>ERAS STREETWEAR</title>
+    <style>
+        /* Google Fonts — carrega em clientes que suportam */
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+        /* Reset de email */
+        body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+        table { border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+        table td { border-collapse: collapse; }
+        img { -ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; }
+
+        body {
+            margin: 0; padding: 0;
+            background-color: #0F0F0F;
+            font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+            color: #F5F1EA;
+        }
+
+        a { color: #C8932E; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* ─── Classes usadas pelas views filhas ───────────────────────── */
+        .greeting {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            color: #F5F1EA;
+            margin-bottom: 16px;
+            font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+        }
+        .text {
+            font-size: 15px;
+            line-height: 1.75;
+            color: #AAAAAA;
+            margin-bottom: 16px;
+        }
+        .btn-wrap {
+            text-align: center;
+            margin: 32px 0;
+        }
+        /* Botão como tabela para máxima compatibilidade */
+        .btn {
+            display: inline-block;
+            background-color: #C8932E;
+            color: #0F0F0F !important;
+            font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 14px 36px;
+            text-decoration: none !important;
+        }
+        .btn:hover { background-color: #A07524; }
+        .btn-accent { background-color: #C8932E; }
+        .info-box {
+            background-color: #222222;
+            border-left: 4px solid #C8932E;
+            padding: 20px 24px;
+            margin: 24px 0;
+        }
+        .info-box.warning { border-left-color: #C8932E; }
+        .info-box .label {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #666666;
+            margin-bottom: 6px;
+        }
+        .info-box .value {
+            font-size: 15px;
+            font-weight: 600;
+            color: #F5F1EA;
+        }
+        .order-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            font-size: 14px;
+        }
+        .order-table th {
+            background-color: #222222;
+            color: #666666;
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 10px 14px;
+            text-align: left;
+        }
+        .order-table td {
+            padding: 12px 14px;
+            color: #AAAAAA;
+            border-bottom: 1px solid #222222;
+        }
+        .order-table tr:last-child td { border-bottom: none; }
+        .order-table .total-row td {
+            font-weight: 700;
+            color: #C8932E;
+            font-size: 15px;
+        }
+        .divider {
+            border: none;
+            border-top: 1px solid #222222;
+            margin: 24px 0;
+        }
+        .tracking-code {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #222222;
+            color: #C8932E;
+            padding: 10px 16px;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            display: inline-block;
+            margin: 8px 0;
+        }
+
+        @media (max-width: 480px) {
+            .email-container { width: 100% !important; }
+            .email-body { padding: 24px 20px !important; }
+        }
+    </style>
+</head>
+<body style="margin:0; padding:0; background-color:#0F0F0F;">
+
+<!-- Wrapper externo -->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+       style="background-color:#0F0F0F; padding:40px 16px;">
+    <tr>
+        <td align="center">
+
+            <!-- Container do email — max 600px -->
+            <table role="presentation" class="email-container" width="600" cellpadding="0" cellspacing="0" border="0"
+                   style="max-width:600px; width:100%; background-color:#1A1A1A; border:1px solid #222222;">
+
+                <!-- Header -->
+                <tr>
+                    <td align="center"
+                        style="background-color:#0F0F0F; padding:32px 40px; border-bottom:2px solid #C8932E;">
+                        <div style="font-family:'Space Grotesk','Helvetica Neue',Arial,sans-serif;
+                                    font-size:28px; font-weight:700; letter-spacing:0.3em;
+                                    text-transform:uppercase; color:#F5F1EA; line-height:1;">
+                            ERAS<span style="color:#C8932E;">.</span>
+                        </div>
+                        <div style="font-family:'Space Grotesk','Helvetica Neue',Arial,sans-serif;
+                                    font-size:10px; letter-spacing:0.4em; text-transform:uppercase;
+                                    color:#4A4A4A; margin-top:6px;">
+                            STREETWEAR · BRASIL · DROP LIMITADO
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- Conteúdo da view filha -->
+                <tr>
+                    <td class="email-body" style="padding:40px;">
+                            <div class="greeting">VOCÊ TÁ NA LISTA</div>
+    <p class="text">
+        Tudo certo, <strong style="color:#F5F1EA;">admin@eras.com.br</strong>.
+    </p>
+    <p class="text">
+        Drop novo, primeiro aviso. Sem spam, sem promessa de desconto fake.
+    </p>
+
+    <div class="info-box">
+        <div class="label">Drop atual</div>
+        <div class="value">CONCRETO E BRASA — 12 peças numeradas, enquanto durar.</div>
+    </div>
+
+    <div class="btn-wrap">
+        <a href="http://localhost:8080/produtos" class="btn">
+            VER CATÁLOGO
+        </a>
+    </div>
+
+    <hr class="divider" />
+    <p class="text" style="font-size:13px; color:#666666;">
+        Se mudar de ideia, é só responder esse email pedindo pra sair da lista.
+    </p>
+                    </td>
+                </tr>
+
+                <!-- Footer -->
+                <tr>
+                    <td style="background-color:#0F0F0F; padding:28px 40px;
+                               border-top:1px solid #222222; text-align:center;">
+                        <div style="margin-bottom:14px;">
+                            <a href="http://localhost:8080"
+                               style="color:#666666; font-size:11px; text-decoration:none; margin:0 8px;">Loja</a>
+                            <a href="http://localhost:8080/minha-conta/pedidos"
+                               style="color:#666666; font-size:11px; text-decoration:none; margin:0 8px;">Meus Pedidos</a>
+                            <a href="http://localhost:8080/manifesto"
+                               style="color:#666666; font-size:11px; text-decoration:none; margin:0 8px;">Manifesto</a>
+                            <a href="http://localhost:8080/politica-de-privacidade"
+                               style="color:#666666; font-size:11px; text-decoration:none; margin:0 8px;">Privacidade</a>
+                        </div>
+                        <div style="font-family:'Space Grotesk','Helvetica Neue',Arial,sans-serif;
+                                    font-size:11px; color:#333333; line-height:1.8;">
+                            © 2026 ERAS STREETWEAR. Drop limitado, atitude ilimitada.<br />
+                            São Paulo, SP — CNPJ XX.XXX.XXX/0001-XX<br />
+                            Você recebeu este email por ter realizado uma ação em nossa loja.
+                        </div>
+                        <div style="margin-top:14px; font-family:'Space Grotesk','Helvetica Neue',Arial,sans-serif;
+                                    font-size:9px; letter-spacing:0.25em; text-transform:uppercase; color:#2A2A2A;">
+                            ENGINEERED BY VAXON
+                        </div>
+                    </td>
+                </tr>
+
+            </table>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
+  

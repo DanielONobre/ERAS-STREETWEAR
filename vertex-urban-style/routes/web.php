@@ -5,6 +5,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\SearchController;
@@ -16,6 +17,10 @@ use Inertia\Inertia;
 
 // ── SEO ────────────────────────────────────────────────────────────────────────
 Route::get('/sitemap.xml', [\App\Http\Controllers\SitemapController::class, 'index'])->name('sitemap');
+
+// ── NEWSLETTER ────────────────────────────────────────────────────────────────
+Route::post('/newsletter/subscribe',   [NewsletterController::class, 'subscribe'])->name('newsletter.subscribe');
+Route::post('/newsletter/unsubscribe', [NewsletterController::class, 'unsubscribe'])->name('newsletter.unsubscribe');
 
 // ── STOREFRONT (público) ───────────────────────────────────────────────────────
 Route::get('/', [HomeController::class, 'index'])->name('home');

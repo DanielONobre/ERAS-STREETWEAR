@@ -6,6 +6,7 @@ use App\Models\Address;
 use App\Models\Order;
 use App\Models\Product;
 use App\Models\Review;
+use App\Observers\OrderObserver;
 use App\Observers\ProductObserver;
 use App\Policies\AddressPolicy;
 use App\Policies\OrderPolicy;
@@ -28,6 +29,7 @@ class AppServiceProvider extends ServiceProvider
     {
         // ── Observers ────────────────────────────────────────────────────────
         Product::observe(ProductObserver::class);
+        Order::observe(OrderObserver::class);
 
         // ── Policies ─────────────────────────────────────────────────────────
         Gate::policy(Product::class, ProductPolicy::class);
