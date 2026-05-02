@@ -1,11 +1,10 @@
 @extends('emails.layout')
 
 @section('content')
-    <div class="greeting">Pedido confirmado! 🎉</div>
-    <p class="text">Olá, <strong>{{ $customer->name }}</strong>!</p>
+    <div class="greeting">PEDIDO CONFIRMADO</div>
     <p class="text">
-        Recebemos seu pedido e ele está sendo processado. Em breve você receberá
-        uma atualização com o código de rastreio.
+        Tudo certo, <strong style="color:#F5F1EA;">{{ $customer->name }}</strong>.
+        A gente recebeu seu pedido e já tá separando.
     </p>
 
     <div class="info-box">
@@ -19,9 +18,9 @@
     <table class="order-table">
         <thead>
             <tr>
-                <th>Produto</th>
-                <th style="text-align:right">Qtd</th>
-                <th style="text-align:right">Valor</th>
+                <th>PRODUTO</th>
+                <th style="text-align:right">QTD</th>
+                <th style="text-align:right">VALOR</th>
             </tr>
         </thead>
         <tbody>
@@ -36,23 +35,23 @@
         <tfoot>
             @if($order->discount > 0)
             <tr>
-                <td colspan="2" style="text-align:right; color:#64748b">Desconto</td>
-                <td style="text-align:right; color:#f97316">- R$ {{ number_format($order->discount, 2, ',', '.') }}</td>
+                <td colspan="2" style="text-align:right; color:#666666;">Desconto</td>
+                <td style="text-align:right; color:#C8932E;">- R$ {{ number_format($order->discount, 2, ',', '.') }}</td>
             </tr>
             @endif
             <tr>
-                <td colspan="2" style="text-align:right; color:#64748b">Frete</td>
-                <td style="text-align:right">
+                <td colspan="2" style="text-align:right; color:#666666;">Frete</td>
+                <td style="text-align:right;">
                     @if($order->shipping_cost == 0)
-                        <span style="color:#0d9488">Grátis</span>
+                        <span style="color:#C8932E;">Grátis</span>
                     @else
                         R$ {{ number_format($order->shipping_cost, 2, ',', '.') }}
                     @endif
                 </td>
             </tr>
             <tr class="total-row">
-                <td colspan="2" style="text-align:right">Total</td>
-                <td style="text-align:right">{{ $order->formatted_total }}</td>
+                <td colspan="2" style="text-align:right;">TOTAL</td>
+                <td style="text-align:right;">{{ $order->formatted_total }}</td>
             </tr>
         </tfoot>
     </table>
@@ -67,12 +66,12 @@
 
     <div class="btn-wrap">
         <a href="{{ route('account.orders.detail', $order) }}" class="btn">
-            Ver detalhes do pedido
+            VER MEU PEDIDO
         </a>
     </div>
 
     <hr class="divider" />
-    <p class="text" style="font-size:13px">
-        Dúvidas? Responda este e-mail ou acesse nosso suporte.
+    <p class="text" style="font-size:13px;">
+        Dúvida? Responde esse email. A gente lê.
     </p>
 @endsection

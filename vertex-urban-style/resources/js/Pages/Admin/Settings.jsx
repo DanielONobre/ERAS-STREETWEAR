@@ -425,7 +425,7 @@ export default function AdminSettings({ settings = {}, stats = {} }) {
                                 ) : (
                                     <CheckIcon className="w-4 h-4" />
                                 )}
-                                {processing ? 'Salvando...' : 'Salvar configurações'}
+                                {processing ? 'Salvando...' : 'SALVAR'}
                             </button>
                         </div>
                     </div>

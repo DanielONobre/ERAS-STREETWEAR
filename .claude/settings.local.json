@@ -36,7 +36,16 @@
       "PowerShell(composer install *)",
       "PowerShell(Get-Content *)",
       "PowerShell(New-Item *)",
-      "PowerShell(Copy-Item *)"
+      "PowerShell(Copy-Item *)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\ERAS-STREETWEAR\\\\vertex-urban-style\\\\resources\\\\views\\\\app.blade.php\" -ErrorAction SilentlyContinue | ForEach-Object { $_.FullName })",
+      "PowerShell(Test-Path *)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\ERAS-STREETWEAR\\\\vertex-urban-style\\\\config\" -ErrorAction SilentlyContinue | ForEach-Object { $_.FullName })",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\ERAS-STREETWEAR\\\\vertex-urban-style\\\\public\" -Recurse -ErrorAction SilentlyContinue | Where-Object { $_.PSIsContainer -eq $false } | ForEach-Object { $_.FullName })",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\ERAS-STREETWEAR\\\\vertex-urban-style\\\\lang\" -Recurse -ErrorAction SilentlyContinue | Where-Object { $_.PSIsContainer -eq $false } | ForEach-Object { $_.FullName })",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\ERAS-STREETWEAR\\\\vertex-urban-style\\\\resources\\\\lang\" -Recurse -ErrorAction SilentlyContinue | Where-Object { $_.PSIsContainer -eq $false } | ForEach-Object { $_.FullName })",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\ERAS-STREETWEAR\\\\vertex-urban-style\\\\resources\\\\js\\\\Pages\\\\Admin\" -Recurse -ErrorAction SilentlyContinue | Where-Object { $_.PSIsContainer -eq $false } | ForEach-Object { $_.FullName })",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\ERAS-STREETWEAR\\\\vertex-urban-style\\\\resources\\\\views\\\\emails\" -Recurse -ErrorAction SilentlyContinue | Where-Object { $_.PSIsContainer -eq $false } | ForEach-Object { $_.FullName })",
+      "Bash(Get-ChildItem *)"
     ]
   }
 }

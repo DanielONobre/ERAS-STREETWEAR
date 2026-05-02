@@ -346,11 +346,11 @@ export default function AdminProductsIndex({
                             {items.length === 0 && (
                                 <tr>
                                     <td colSpan={9} className="px-5 py-16 text-center">
-                                        <div className="text-4xl mb-3">📦</div>
-                                        <p className="text-white/40 text-sm">Nenhum produto encontrado</p>
-                                        <Link href="/admin/produtos/criar" className="btn-primary btn-sm mt-4 inline-flex">
+                                        <p className="font-display font-semibold text-white/50 mb-1">Nada por aqui ainda.</p>
+                                        <p className="text-white/30 text-sm mb-4">Crie o primeiro produto do catálogo.</p>
+                                        <Link href="/admin/produtos/criar" className="btn-primary btn-sm inline-flex">
                                             <PlusIcon className="w-3.5 h-3.5" />
-                                            Criar primeiro produto
+                                            NOVO PRODUTO
                                         </Link>
                                     </td>
                                 </tr>

@@ -1,4 +1,4 @@
-import { useForm, Link } from '@inertiajs/react';
+import { useForm, Link, Head } from '@inertiajs/react';
 import { motion } from 'framer-motion';
 import { UserIcon, EnvelopeIcon, PhoneIcon, LockClosedIcon, EyeIcon, EyeSlashIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
@@ -21,6 +21,8 @@ export default function Register() {
     ];
 
     return (
+        <>
+        <Head title="Criar conta — ERAS STREETWEAR" />
         <div className="min-h-screen bg-dark flex items-center justify-center px-4 py-12">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -112,5 +114,6 @@ export default function Register() {
                 </div>
             </motion.div>
         </div>
+        </>
     );
 }

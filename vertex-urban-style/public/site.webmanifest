@@ -1,7 +1,7 @@
 {
-    "name": "ERAS Streetwear",
+    "name": "ERAS STREETWEAR",
     "short_name": "ERAS",
-    "description": "Streetwear premium com identidade urbana.",
+    "description": "Streetwear autoral brasileiro.",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#0F0F0F",
@@ -10,8 +10,7 @@
         {
             "src": "/favicon.svg",
             "sizes": "any",
-            "type": "image/svg+xml",
-            "purpose": "any maskable"
+            "type": "image/svg+xml"
         }
     ]
 }

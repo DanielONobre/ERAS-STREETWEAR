@@ -20,7 +20,7 @@ export const useSidebar = () => useContext(SidebarCtx);
 /* ─── Nav items ──────────────────────────────────────────────────────── */
 const NAV = [
     {
-        label: 'Dashboard',
+        label: 'Visão geral',
         href: '/admin',
         routeName: 'admin.dashboard',
         icon: HomeIcon,
@@ -108,14 +108,16 @@ function Sidebar({ open, onClose, stats }) {
             >
                 {/* Logo */}
                 <div className="flex items-center justify-between px-5 h-16 border-b border-white/[0.06] flex-shrink-0">
-                    <Link href="/" className="flex items-center gap-2 group">
-                        <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-primary to-primary-700 flex items-center justify-center flex-shrink-0">
-                            <span className="font-display font-bold text-xs text-white">E</span>
+                    <Link href="/" className="flex items-center gap-2.5 group">
+                        <div className="w-7 h-7 rounded-lg bg-primary/20 border border-primary/30 flex items-center justify-center flex-shrink-0">
+                            <span className="font-display font-bold text-xs text-eras-mustard">E</span>
                         </div>
-                        <span className="font-display font-bold text-white tracking-tight">
-                            ERAS
-                            <span className="text-primary">.</span>
-                        </span>
+                        <div className="leading-tight">
+                            <div className="font-display font-bold text-white tracking-[0.2em] text-sm uppercase">
+                                ERAS<span className="text-eras-mustard">.</span>
+                            </div>
+                            <div className="text-[9px] tracking-[0.25em] text-white/25 uppercase">PAINEL ADMIN</div>
+                        </div>
                     </Link>
                     <button onClick={onClose} className="lg:hidden text-white/40 hover:text-white">
                         <XMarkIcon className="w-5 h-5" />
@@ -302,7 +304,7 @@ function Topbar({ title, breadcrumbs, onMenuOpen, stats }) {
 /* ─── Bottom Navigation (mobile only) ───────────────────────────────────── */
 
 const BOTTOM_NAV = [
-    { label: 'Dashboard', href: '/admin',         icon: HomeIcon,        iconActive: HomeSolid },
+    { label: 'Visão geral', href: '/admin',       icon: HomeIcon,        iconActive: HomeSolid },
     { label: 'Pedidos',   href: '/admin/pedidos',  icon: ShoppingBagIcon, iconActive: BagSolid, badge: 'orders_pending' },
     { label: 'Produtos',  href: '/admin/produtos', icon: CubeIcon,        iconActive: CubeSolid },
     { label: 'Clientes',  href: '/admin/clientes', icon: UserGroupIcon,   iconActive: UserSolid },

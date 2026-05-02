@@ -1,36 +1,31 @@
 @extends('emails.layout')
 
 @section('content')
-    <div class="greeting">Pedido entregue com sucesso! ✅</div>
-    <p class="text">Olá, <strong>{{ $customer->name }}</strong>!</p>
+    <div class="greeting">CHEGOU</div>
     <p class="text">
-        Seu pedido <strong>#{{ str_pad($order->id, 6, '0', STR_PAD_LEFT) }}</strong> foi entregue.
-        Esperamos que você ame o seu novo estilo!
+        <strong style="color:#F5F1EA;">{{ $customer->name }}</strong>,
+        seu pedido foi entregue. Esperamos que tenha gostado.
     </p>
 
-    <div class="info-box warning">
-        <div class="label">Sua opinião importa</div>
-        <div class="value" style="font-size:14px; font-weight:400; color:#94a3b8; margin-top:4px">
-            Avalie os produtos que você recebeu e ajude outros clientes a
-            fazer a melhor escolha.
-        </div>
-    </div>
+    <p class="text">
+        Achou ruim algo? Responde esse email — a gente resolve em 24h.
+    </p>
+
+    <p class="text">
+        E se gostou: marca a gente.
+        <a href="https://instagram.com/erasstreetwear" style="color:#C8932E;">@erasstreetwear</a>.
+    </p>
 
     <div class="btn-wrap">
-        <a href="{{ route('account.orders.detail', $order) }}" class="btn btn-accent">
-            ⭐ Avaliar minha compra
-        </a>
-    </div>
-
-    <div class="btn-wrap">
-        <a href="{{ route('home') }}" class="btn">
-            Continuar comprando
+        <a href="{{ route('account.orders.detail', $order) }}" class="btn">
+            VER MEU PEDIDO
         </a>
     </div>
 
     <hr class="divider" />
-    <p class="text" style="font-size:13px">
-        Algum produto chegou com problema? Temos 7 dias para troca.
-        <a href="{{ config('app.url') }}/politica-de-troca">Ver política de troca</a>.
+    <p class="text" style="font-size:13px;">
+        Algum produto chegou com problema? A gente tem 7 dias pra resolver.
+        <a href="{{ config('app.url') }}/politica-de-troca" style="color:#C8932E;">Ver política de troca</a>.
     </p>
+    <p class="text" style="font-size:13px; color:#666666;">— ERAS</p>
 @endsection

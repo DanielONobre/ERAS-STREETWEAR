@@ -218,8 +218,8 @@ export default function AdminOrdersIndex({
                             {items.length === 0 && (
                                 <tr>
                                     <td colSpan={8} className="px-5 py-16 text-center">
-                                        <p className="text-4xl mb-3">📦</p>
-                                        <p className="text-white/40 text-sm">Nenhum pedido encontrado</p>
+                                        <p className="font-display font-semibold text-white/50 mb-1">Nada por aqui ainda.</p>
+                                        <p className="text-white/30 text-sm">Nenhum pedido no período selecionado.</p>
                                     </td>
                                 </tr>
                             )}

@@ -1,9 +1,9 @@
 @extends('emails.layout')
 
 @section('content')
-    <div class="greeting" style="color:#f97316">🔔 Novo pedido recebido!</div>
+    <div class="greeting" style="color:#C8932E;">NOVO PEDIDO</div>
     <p class="text">
-        Um novo pedido foi realizado na loja. Confira os detalhes abaixo:
+        Um novo pedido foi realizado na loja.
     </p>
 
     @php $order->loadMissing('user', 'items.product', 'address'); @endphp
@@ -27,9 +27,9 @@
     <table class="order-table">
         <thead>
             <tr>
-                <th>Produto</th>
-                <th style="text-align:right">Qtd</th>
-                <th style="text-align:right">Valor</th>
+                <th>PRODUTO</th>
+                <th style="text-align:right">QTD</th>
+                <th style="text-align:right">VALOR</th>
             </tr>
         </thead>
         <tbody>
@@ -43,16 +43,16 @@
         </tbody>
         <tfoot>
             <tr class="total-row">
-                <td colspan="2" style="text-align:right">Total</td>
-                <td style="text-align:right">{{ $order->formatted_total }}</td>
+                <td colspan="2" style="text-align:right;">TOTAL</td>
+                <td style="text-align:right;">{{ $order->formatted_total }}</td>
             </tr>
         </tfoot>
     </table>
     @endif
 
     <div class="btn-wrap">
-        <a href="{{ route('admin.pedidos.show', $order) }}" class="btn btn-accent">
-            Gerenciar pedido no Admin
+        <a href="{{ route('admin.pedidos.show', $order) }}" class="btn">
+            GERENCIAR NO PAINEL
         </a>
     </div>
 @endsection

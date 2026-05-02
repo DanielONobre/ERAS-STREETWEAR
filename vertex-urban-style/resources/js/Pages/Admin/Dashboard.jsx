@@ -140,8 +140,8 @@ export default function AdminDashboard({
 
     return (
         <AdminLayout
-            title="Dashboard"
-            breadcrumbs={[{ label: 'Dashboard' }]}
+            title="Visão geral"
+            breadcrumbs={[{ label: 'Visão geral' }]}
             stats={stats}
         >
             {/* KPI Cards */}
@@ -213,7 +213,7 @@ export default function AdminDashboard({
                 {/* ── Top 5 produtos ──────────────────────────────────── */}
                 <div className="card p-5">
                     <div className="flex items-center justify-between mb-5">
-                        <h2 className="font-semibold text-white">Top Produtos</h2>
+                        <h2 className="font-semibold text-white">MAIS VENDIDOS</h2>
                         <Link href="/admin/relatorios" className="text-xs text-primary hover:text-primary-400 transition-colors">
                             Ver relatório
                         </Link>

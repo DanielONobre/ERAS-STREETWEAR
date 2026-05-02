@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="dark">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#080d14" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0F0F0F" />
+    <meta name="description" content="ERAS STREETWEAR — Streetwear autoral brasileiro. Drops limitados, tecidos selecionados, peças com história. São Paulo." />
+    <meta name="keywords" content="streetwear brasileiro, streetwear premium, drop limitado, moda autoral, roupas urbanas, eras streetwear" />
+    <meta name="author" content="ERAS STREETWEAR" />
+    <meta name="robots" content="index, follow" />
 
     {{-- SEO dinâmico via Inertia Head --}}
-    <title inertia>{{ config('app.name', 'ERAS Streetwear') }}</title>
+    <title inertia>{{ config('app.name', 'ERAS STREETWEAR') }}</title>
 
     {{-- Canonical URL (sobrescrito por página via Inertia Head) --}}
     @php
@@ -21,17 +25,22 @@
     <link rel="canonical" href="{{ $baseCanonical }}" />
 
     {{-- Open Graph defaults --}}
-    <meta property="og:site_name" content="ERAS Streetwear" />
+    <meta property="og:site_name" content="ERAS STREETWEAR" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ $baseCanonical }}" />
-    <meta property="og:image" content="{{ asset('images/og-default.jpg') }}" />
+    <meta property="og:title" content="ERAS STREETWEAR — Atitude não é tendência." />
+    <meta property="og:description" content="Streetwear autoral brasileiro. Drops limitados, tecidos selecionados, peças que não vão estar em todo lugar." />
+    <meta property="og:image" content="{{ asset('og-image.png') }}" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="pt_BR" />
 
     {{-- Twitter Card defaults --}}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@erasstreetwear" />
-    <meta name="twitter:image" content="{{ asset('images/og-default.jpg') }}" />
+    <meta name="twitter:title" content="ERAS STREETWEAR — Atitude não é tendência." />
+    <meta name="twitter:description" content="Streetwear autoral brasileiro. Drops limitados." />
+    <meta name="twitter:image" content="{{ asset('og-image.png') }}" />
 
     {{-- Fonts preconnect --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">

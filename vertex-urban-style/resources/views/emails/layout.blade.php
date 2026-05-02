@@ -3,122 +3,81 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ $subject ?? 'ERAS Streetwear' }}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>{{ $subject ?? 'ERAS STREETWEAR' }}</title>
     <style>
-        /* Reset */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        /* Google Fonts — carrega em clientes que suportam */
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+        /* Reset de email */
+        body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+        table { border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+        table td { border-collapse: collapse; }
+        img { -ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; }
+
         body {
-            background-color: #0f1218;
-            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            color: #e2e8f0;
-            -webkit-text-size-adjust: 100%;
+            margin: 0; padding: 0;
+            background-color: #0F0F0F;
+            font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+            color: #F5F1EA;
         }
-        a { color: #0d9488; text-decoration: none; }
+
+        a { color: #C8932E; text-decoration: none; }
         a:hover { text-decoration: underline; }
 
-        /* Wrapper */
-        .wrapper {
-            width: 100%;
-            background-color: #0f1218;
-            padding: 40px 16px;
-        }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: #161c27;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid #1e2a3a;
-        }
-
-        /* Header */
-        .header {
-            background: linear-gradient(135deg, #080d14 0%, #0d1a2b 100%);
-            padding: 32px 40px;
-            text-align: center;
-            border-bottom: 2px solid #0d9488;
-        }
-        .logo {
-            font-size: 26px;
-            font-weight: 800;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: #ffffff;
-        }
-        .logo span { color: #0d9488; }
-        .tagline {
-            font-size: 11px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #64748b;
-            margin-top: 4px;
-        }
-
-        /* Body */
-        .body {
-            padding: 40px;
-        }
+        /* ─── Classes usadas pelas views filhas ───────────────────────── */
         .greeting {
             font-size: 22px;
             font-weight: 700;
-            color: #f1f5f9;
+            letter-spacing: -0.01em;
+            color: #F5F1EA;
             margin-bottom: 16px;
+            font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
         }
         .text {
             font-size: 15px;
-            line-height: 1.7;
-            color: #94a3b8;
+            line-height: 1.75;
+            color: #AAAAAA;
             margin-bottom: 16px;
         }
-
-        /* CTA Button */
         .btn-wrap {
             text-align: center;
             margin: 32px 0;
         }
+        /* Botão como tabela para máxima compatibilidade */
         .btn {
             display: inline-block;
-            background-color: #0d9488;
-            color: #ffffff !important;
-            font-size: 14px;
+            background-color: #C8932E;
+            color: #0F0F0F !important;
+            font-family: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+            font-size: 12px;
             font-weight: 700;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
             text-transform: uppercase;
             padding: 14px 36px;
-            border-radius: 8px;
             text-decoration: none !important;
         }
-        .btn:hover { background-color: #0f766e; }
-        .btn-accent {
-            background-color: #f97316;
-        }
-        .btn-accent:hover { background-color: #ea6c10; }
-
-        /* Info box */
+        .btn:hover { background-color: #A07524; }
+        .btn-accent { background-color: #C8932E; }
         .info-box {
-            background-color: #1e2a3a;
-            border-left: 4px solid #0d9488;
-            border-radius: 8px;
+            background-color: #222222;
+            border-left: 4px solid #C8932E;
             padding: 20px 24px;
             margin: 24px 0;
         }
-        .info-box.warning {
-            border-left-color: #f97316;
-        }
+        .info-box.warning { border-left-color: #C8932E; }
         .info-box .label {
-            font-size: 11px;
+            font-size: 10px;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            color: #64748b;
+            color: #666666;
             margin-bottom: 6px;
         }
         .info-box .value {
             font-size: 15px;
             font-weight: 600;
-            color: #e2e8f0;
+            color: #F5F1EA;
         }
-
-        /* Order table */
         .order-table {
             width: 100%;
             border-collapse: collapse;
@@ -126,9 +85,9 @@
             font-size: 14px;
         }
         .order-table th {
-            background-color: #1e2a3a;
-            color: #64748b;
-            font-size: 11px;
+            background-color: #222222;
+            color: #666666;
+            font-size: 10px;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -137,30 +96,25 @@
         }
         .order-table td {
             padding: 12px 14px;
-            color: #94a3b8;
-            border-bottom: 1px solid #1e2a3a;
+            color: #AAAAAA;
+            border-bottom: 1px solid #222222;
         }
         .order-table tr:last-child td { border-bottom: none; }
         .order-table .total-row td {
             font-weight: 700;
-            color: #0d9488;
+            color: #C8932E;
             font-size: 15px;
         }
-
-        /* Divider */
         .divider {
             border: none;
-            border-top: 1px solid #1e2a3a;
+            border-top: 1px solid #222222;
             margin: 24px 0;
         }
-
-        /* Tracking */
         .tracking-code {
             font-family: 'Courier New', Courier, monospace;
-            background-color: #1e2a3a;
-            color: #0d9488;
+            background-color: #222222;
+            color: #C8932E;
             padding: 10px 16px;
-            border-radius: 6px;
             font-size: 16px;
             font-weight: 700;
             letter-spacing: 2px;
@@ -168,98 +122,79 @@
             margin: 8px 0;
         }
 
-        /* Footer */
-        .footer {
-            background-color: #080d14;
-            padding: 32px 40px;
-            text-align: center;
-            border-top: 1px solid #1e2a3a;
-        }
-        .footer-links {
-            margin-bottom: 16px;
-        }
-        .footer-links a {
-            color: #64748b;
-            font-size: 12px;
-            margin: 0 10px;
-        }
-        .footer-links a:hover { color: #0d9488; }
-        .footer-copy {
-            font-size: 11px;
-            color: #334155;
-            line-height: 1.8;
-        }
-        .footer-brand {
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #475569;
-            margin-bottom: 8px;
-        }
-
-        /* Social */
-        .social-links {
-            margin: 16px 0;
-        }
-        .social-links a {
-            display: inline-block;
-            width: 32px;
-            height: 32px;
-            background-color: #1e2a3a;
-            border-radius: 50%;
-            line-height: 32px;
-            text-align: center;
-            font-size: 13px;
-            color: #64748b !important;
-            margin: 0 4px;
-        }
-
-        /* Responsive */
         @media (max-width: 480px) {
-            .header { padding: 24px 20px; }
-            .body { padding: 24px 20px; }
-            .footer { padding: 24px 20px; }
+            .email-container { width: 100% !important; }
+            .email-body { padding: 24px 20px !important; }
         }
     </style>
 </head>
-<body>
-<div class="wrapper">
-    <div class="container">
+<body style="margin:0; padding:0; background-color:#0F0F0F;">
 
-        {{-- Header --}}
-        <div class="header">
-            <div class="logo">ERAS<span>.</span></div>
-            <div class="tagline">Streetwear</div>
-        </div>
+<!-- Wrapper externo -->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+       style="background-color:#0F0F0F; padding:40px 16px;">
+    <tr>
+        <td align="center">
 
-        {{-- Corpo do email --}}
-        <div class="body">
-            @yield('content')
-        </div>
+            <!-- Container do email — max 600px -->
+            <table role="presentation" class="email-container" width="600" cellpadding="0" cellspacing="0" border="0"
+                   style="max-width:600px; width:100%; background-color:#1A1A1A; border:1px solid #222222;">
 
-        {{-- Footer --}}
-        <div class="footer">
-            <div class="social-links">
-                <a href="#" title="Instagram">Ig</a>
-                <a href="#" title="TikTok">Tk</a>
-                <a href="#" title="Pinterest">Pt</a>
-            </div>
-            <div class="footer-links">
-                <a href="{{ config('app.url') }}">Loja</a>
-                <a href="{{ config('app.url') }}/minha-conta/pedidos">Meus Pedidos</a>
-                <a href="{{ config('app.url') }}/contato">Contato</a>
-                <a href="{{ config('app.url') }}/politica-de-privacidade">Privacidade</a>
-            </div>
-            <div class="footer-brand">ERAS Streetwear</div>
-            <div class="footer-copy">
-                © {{ date('Y') }} ERAS Streetwear. Todos os direitos reservados.<br />
-                São Paulo, SP — CNPJ 00.000.000/0001-00<br />
-                Você está recebendo este e-mail porque realizou uma ação em nossa loja.
-            </div>
-        </div>
+                <!-- Header -->
+                <tr>
+                    <td align="center"
+                        style="background-color:#0F0F0F; padding:32px 40px; border-bottom:2px solid #C8932E;">
+                        <div style="font-family:'Space Grotesk','Helvetica Neue',Arial,sans-serif;
+                                    font-size:28px; font-weight:700; letter-spacing:0.3em;
+                                    text-transform:uppercase; color:#F5F1EA; line-height:1;">
+                            ERAS<span style="color:#C8932E;">.</span>
+                        </div>
+                        <div style="font-family:'Space Grotesk','Helvetica Neue',Arial,sans-serif;
+                                    font-size:10px; letter-spacing:0.4em; text-transform:uppercase;
+                                    color:#4A4A4A; margin-top:6px;">
+                            STREETWEAR · BRASIL · DROP LIMITADO
+                        </div>
+                    </td>
+                </tr>
 
-    </div>
-</div>
+                <!-- Conteúdo da view filha -->
+                <tr>
+                    <td class="email-body" style="padding:40px;">
+                        @yield('content')
+                    </td>
+                </tr>
+
+                <!-- Footer -->
+                <tr>
+                    <td style="background-color:#0F0F0F; padding:28px 40px;
+                               border-top:1px solid #222222; text-align:center;">
+                        <div style="margin-bottom:14px;">
+                            <a href="{{ config('app.url') }}"
+                               style="color:#666666; font-size:11px; text-decoration:none; margin:0 8px;">Loja</a>
+                            <a href="{{ config('app.url') }}/minha-conta/pedidos"
+                               style="color:#666666; font-size:11px; text-decoration:none; margin:0 8px;">Meus Pedidos</a>
+                            <a href="{{ config('app.url') }}/manifesto"
+                               style="color:#666666; font-size:11px; text-decoration:none; margin:0 8px;">Manifesto</a>
+                            <a href="{{ config('app.url') }}/politica-de-privacidade"
+                               style="color:#666666; font-size:11px; text-decoration:none; margin:0 8px;">Privacidade</a>
+                        </div>
+                        <div style="font-family:'Space Grotesk','Helvetica Neue',Arial,sans-serif;
+                                    font-size:11px; color:#333333; line-height:1.8;">
+                            © {{ date('Y') }} ERAS STREETWEAR. Drop limitado, atitude ilimitada.<br />
+                            São Paulo, SP — CNPJ XX.XXX.XXX/0001-XX<br />
+                            Você recebeu este email por ter realizado uma ação em nossa loja.
+                        </div>
+                        <div style="margin-top:14px; font-family:'Space Grotesk','Helvetica Neue',Arial,sans-serif;
+                                    font-size:9px; letter-spacing:0.25em; text-transform:uppercase; color:#2A2A2A;">
+                            ENGINEERED BY VAXON
+                        </div>
+                    </td>
+                </tr>
+
+            </table>
+        </td>
+    </tr>
+</table>
+
 </body>
 </html>

@@ -1,4 +1,4 @@
-import { useForm, Link } from '@inertiajs/react';
+import { useForm, Link, Head } from '@inertiajs/react';
 import { motion } from 'framer-motion';
 import { EnvelopeIcon, LockClosedIcon, EyeIcon, EyeSlashIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
@@ -15,6 +15,8 @@ export default function Login({ status, canResetPassword }) {
     };
 
     return (
+        <>
+        <Head title="Entrar — ERAS STREETWEAR" />
         <div className="min-h-screen bg-dark flex items-center justify-center px-4">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -110,5 +112,6 @@ export default function Login({ status, canResetPassword }) {
                 </div>
             </motion.div>
         </div>
+        </>
     );
 }
