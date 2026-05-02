@@ -9,40 +9,35 @@ import 'swiper/css/effect-fade';
 
 import StoreLayout from '@layouts/StoreLayout';
 import ProductGrid from '@components/Product/ProductGrid';
-import {
-    ArrowRightIcon,
-    TruckIcon,
-    ShieldCheckIcon,
-    ArrowPathIcon,
-    CreditCardIcon,
-} from '@heroicons/react/24/outline';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 /* ─── Fallback slides (quando banners não vem do backend) ─────────────── */
 const DEFAULT_BANNERS = [
     {
         id: 1,
-        title: 'Vista sua Atitude',
-        subtitle: 'Streetwear autêntico para quem define tendências, não segue.',
-        cta: 'Explorar coleção',
+        eyebrow: 'DROP 01 — EDIÇÃO LIMITADA',
+        title: 'ATITUDE NÃO É TENDÊNCIA.',
+        subtitle: 'Streetwear autoral brasileiro. Drops limitados, tecidos selecionados, peças que não vão estar em todo lugar.',
+        cta: 'VER DROP ATUAL',
         cta_url: '/produtos',
         overlay: 'from-dark/90 via-dark/60 to-transparent',
         bg: 'https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=1400&q=80',
     },
     {
         id: 2,
-        title: 'Nova Coleção 2025',
-        subtitle: 'Peças únicas que falam por você. Chegou a coleção mais esperada do ano.',
-        cta: 'Ver lançamentos',
+        title: 'Concreto e Brasa.',
+        subtitle: 'Doze peças. Edição numerada. Quando acabar, acabou.',
+        cta: 'VER DROP ATUAL',
         cta_url: '/produtos?is_new=1',
         overlay: 'from-dark/90 via-dark/50 to-transparent',
         bg: 'https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=1400&q=80',
     },
     {
         id: 3,
-        title: 'Sale — Até 50% OFF',
-        subtitle: 'Peças selecionadas com desconto imperdível. Aproveite enquanto durar.',
-        cta: 'Ver ofertas',
-        cta_url: '/produtos?on_sale=1',
+        title: 'Brasil na costura.',
+        subtitle: 'Modelagem, tecido e produção em São Paulo. Curto circuito, qualidade no ponto.',
+        cta: 'MANIFESTO',
+        cta_url: '/manifesto',
         overlay: 'from-dark/90 via-dark/60 to-transparent',
         bg: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=1400&q=80',
     },
@@ -58,12 +53,20 @@ const INSTA_PHOTOS = [
     'https://images.unsplash.com/photo-1506634572416-48cdfe530110?w=400&q=80',
 ];
 
-/* ─── Valor ──────────────────────────────────────────────────────────── */
-const VALUE_PROPS = [
-    { icon: TruckIcon,       title: 'Frete Grátis',       sub: 'Acima de R$\u00a0299' },
-    { icon: ShieldCheckIcon, title: 'Compra 100% Segura',  sub: 'SSL + criptografia' },
-    { icon: ArrowPathIcon,   title: 'Primeira Troca Grátis', sub: 'Política de 30 dias' },
-    { icon: CreditCardIcon,  title: 'Parcelamento em 10x', sub: 'Sem juros no cartão' },
+/* ─── Manifesto ──────────────────────────────────────────────────────── */
+const MANIFESTO_COLS = [
+    {
+        heading: 'PEÇA COM HISTÓRIA',
+        body: 'Cada modelo tem origem, intenção e nome. Nada saiu de mood board genérico.',
+    },
+    {
+        heading: 'DROP LIMITADO',
+        body: 'Tiragem fechada. Sem reposição. Quem pega, pega — e quem não pega, espera o próximo.',
+    },
+    {
+        heading: 'BRASIL NA COSTURA',
+        body: 'Modelagem, tecido e produção em São Paulo. Curto circuito, qualidade no ponto.',
+    },
 ];
 
 /* ─── Countdown ──────────────────────────────────────────────────────── */
@@ -109,14 +112,15 @@ export default function Home({
     const promoEndsAt = settings?.promo_ends_at ?? new Date(Date.now() + 3 * 86400000).toISOString();
     const countdown = useCountdown(promoEndsAt);
     const swiperRef = useRef(null);
+    const [newsletterEmail, setNewsletterEmail] = useState('');
 
     return (
         <StoreLayout>
             <Head>
-                <title>ERAS Streetwear — Vista sua atitude</title>
-                <meta name="description" content="E-commerce de moda streetwear. Roupas, acessórios e calçados com estilo autêntico." />
-                <meta property="og:title" content="ERAS Streetwear — Vista sua atitude" />
-                <meta property="og:description" content="Streetwear que fala por você. Peças únicas para quem não segue tendências — cria as suas próprias." />
+                <title>ERAS Streetwear — Atitude não é tendência</title>
+                <meta name="description" content="Streetwear autoral brasileiro. Drops limitados, tecidos selecionados, peças que não vão estar em todo lugar." />
+                <meta property="og:title" content="ERAS Streetwear — Atitude não é tendência" />
+                <meta property="og:description" content="Streetwear autoral brasileiro. Drops limitados, tecidos selecionados." />
                 <meta property="og:type" content="website" />
             </Head>
 
@@ -152,9 +156,11 @@ export default function Home({
                                             animate={{ opacity: 1, y: 0 }}
                                             transition={{ duration: 0.7, ease: 'easeOut' }}
                                         >
-                                            <span className="badge-primary mb-5 inline-flex">
-                                                Nova Coleção 2025
-                                            </span>
+                                            {slide.eyebrow && (
+                                                <span className="badge-primary mb-5 inline-flex">
+                                                    {slide.eyebrow}
+                                                </span>
+                                            )}
                                             <h1 className="font-display text-5xl md:text-7xl font-bold leading-tight tracking-tight">
                                                 {slide.title}
                                             </h1>
@@ -166,14 +172,14 @@ export default function Home({
                                                     href={slide.cta_url ?? '/produtos'}
                                                     className="btn-primary btn-lg"
                                                 >
-                                                    {slide.cta ?? 'Explorar'}
+                                                    {slide.cta ?? 'VER DROP ATUAL'}
                                                     <ArrowRightIcon className="w-5 h-5" />
                                                 </Link>
                                                 <Link
-                                                    href="/produtos?is_new=1"
+                                                    href="/manifesto"
                                                     className="btn-outline btn-lg"
                                                 >
-                                                    Novidades
+                                                    MANIFESTO
                                                 </Link>
                                             </div>
                                         </motion.div>
@@ -241,8 +247,8 @@ export default function Home({
             {featuredProducts?.length > 0 && (
                 <section className="container-page py-8">
                     <SectionHeader
-                        title="Destaques"
-                        subtitle="Os mais amados da temporada"
+                        title="DROP ATUAL"
+                        subtitle="Concreto e Brasa — Edição numerada."
                         href="/produtos?sort=bestsellers"
                     />
                     <div className="mt-8">
@@ -251,22 +257,22 @@ export default function Home({
                 </section>
             )}
 
-            {/* ══ d) PROMO BANNER com countdown ══════════════════════════════════ */}
+            {/* ══ d) SEÇÃO DROP — CONCRETO E BRASA ══════════════════════════════ */}
             <section className="container-page py-12">
                 <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary-950 via-dark-100 to-dark border border-primary/20">
                     {/* Decore */}
-                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_80%_50%,rgba(13,148,136,0.15),transparent)]" />
+                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_80%_50%,rgba(200,147,46,0.15),transparent)]" />
                     <div className="absolute top-0 right-0 w-72 h-72 bg-primary/5 rounded-full -translate-y-1/2 translate-x-1/2" />
 
                     <div className="relative z-10 flex flex-col md:flex-row items-center gap-8 p-8 md:p-14">
                         <div className="flex-1 text-center md:text-left">
-                            <span className="badge-accent mb-4 inline-flex">Oferta por tempo limitado</span>
+                            <span className="badge-accent mb-4 inline-flex">DROP 01 — EDIÇÃO LIMITADA</span>
                             <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight">
-                                Nova Coleção{' '}
-                                <span className="text-gradient-brand">Streetwear</span>
+                                Concreto e{' '}
+                                <span className="text-eras-mustard">Brasa</span>
                             </h2>
                             <p className="mt-3 text-white/50 max-w-sm">
-                                As peças mais esperadas do ano chegaram. Não perca essa chance.
+                                A primeira coleção ERAS nasce do contraste: o cinza do concreto urbano e o calor da brasa do interior. Doze peças. Edição numerada. Quando acabar, acabou.
                             </p>
 
                             {/* Countdown */}
@@ -283,7 +289,7 @@ export default function Home({
 
                         <div className="flex-shrink-0">
                             <Link href="/produtos?is_new=1" className="btn-primary btn-lg">
-                                Ver coleção
+                                VER DROP ATUAL
                                 <ArrowRightIcon className="w-5 h-5" />
                             </Link>
                         </div>
@@ -311,40 +317,57 @@ export default function Home({
                 </section>
             )}
 
-            {/* ══ f) VALUE PROPOSITION ════════════════════════════════════════════ */}
+            {/* ══ f) MANIFESTO — O QUE A GENTE FAZ AQUI ══════════════════════════ */}
             <section className="border-y border-white/[0.06] bg-dark-50/30">
-                <div className="container-page py-14">
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-0 lg:divide-x divide-white/[0.06]">
-                        {VALUE_PROPS.map(({ icon: Icon, title, sub }, i) => (
+                <div className="container-page py-16 lg:py-20">
+                    <div className="text-center mb-12">
+                        <h2 className="section-title">O QUE A GENTE FAZ AQUI</h2>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+                        {MANIFESTO_COLS.map(({ heading, body }, i) => (
                             <motion.div
-                                key={title}
+                                key={heading}
                                 initial={{ opacity: 0, y: 16 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: i * 0.1 }}
-                                className="flex flex-col items-center text-center px-6 py-4"
+                                className="text-center md:text-left"
                             >
-                                <div className="w-12 h-12 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4">
-                                    <Icon className="w-6 h-6 text-primary" />
-                                </div>
-                                <p className="font-semibold text-white text-sm">{title}</p>
-                                <p className="text-white/40 text-xs mt-1">{sub}</p>
+                                <p className="font-display font-bold text-sm tracking-widest text-eras-mustard uppercase mb-3">
+                                    {heading}
+                                </p>
+                                <p className="text-white/60 text-sm leading-relaxed">{body}</p>
                             </motion.div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* ══ g) INSTAGRAM FEED ═══════════════════════════════════════════════ */}
+            {/* ══ g) ENTRE NA LISTA + INSTAGRAM ══════════════════════════════════ */}
             <section className="container-page py-20">
                 <div className="text-center mb-10">
-                    <h2 className="section-title">@erasstreetwear</h2>
+                    <h2 className="section-title">ENTRE NA LISTA</h2>
                     <p className="section-subtitle mt-2">
-                        Siga-nos no Instagram e mostre seu estilo
+                        Drop novo, primeiro aviso. Sem spam, sem promessa de desconto fake.
                     </p>
+                    <form
+                        className="flex gap-3 max-w-md mx-auto mt-6"
+                        onSubmit={(e) => e.preventDefault()}
+                    >
+                        <input
+                            type="email"
+                            value={newsletterEmail}
+                            onChange={(e) => setNewsletterEmail(e.target.value)}
+                            placeholder="seu email"
+                            className="input flex-1"
+                        />
+                        <button type="submit" className="btn-primary flex-shrink-0">
+                            QUERO SER AVISADO
+                        </button>
+                    </form>
                 </div>
 
-                <div className="grid grid-cols-3 gap-2 sm:gap-3">
+                <div className="grid grid-cols-3 gap-2 sm:gap-3 mt-14">
                     {INSTA_PHOTOS.map((src, i) => (
                         <motion.a
                             key={i}
@@ -362,7 +385,6 @@ export default function Home({
                                 alt={`Post ${i + 1} @erasstreetwear`}
                                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                             />
-                            {/* Overlay */}
                             <div className="absolute inset-0 bg-dark/0 group-hover:bg-dark/50 transition-colors duration-300 flex items-center justify-center">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -384,7 +406,7 @@ export default function Home({
                         rel="noreferrer"
                         className="btn-outline inline-flex"
                     >
-                        Seguir @erasstreetwear
+                        @erasstreetwear
                     </a>
                 </div>
             </section>

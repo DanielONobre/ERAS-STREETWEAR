@@ -60,22 +60,17 @@ export default function NotFound() {
                     </div>
 
                     <h1 className="text-2xl sm:text-3xl font-display font-bold mb-3">
-                        Página não encontrada
+                        Essa peça não tá no catálogo.
                     </h1>
                     <p className="text-white/50 mb-10 text-sm sm:text-base leading-relaxed">
                         O endereço que você tentou acessar não existe ou foi removido.
-                        Que tal explorar nossa coleção?
                     </p>
 
                     {/* CTAs */}
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                         <Link href="/" className="btn-primary btn-lg gap-2 w-full sm:w-auto justify-center">
                             <HomeIcon className="w-4 h-4" />
-                            Ir para a Home
-                        </Link>
-                        <Link href="/produtos" className="btn-outline btn-lg gap-2 w-full sm:w-auto justify-center">
-                            <MagnifyingGlassIcon className="w-4 h-4" />
-                            Ver Produtos
+                            VOLTAR PRA HOME
                         </Link>
                     </div>
 

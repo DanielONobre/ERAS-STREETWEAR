@@ -29,19 +29,14 @@ export function EmptyCart() {
                 <circle cx="30" cy="65" r="1.5" fill="#f97316" opacity="0.4" />
             </svg>
             <div>
-                <h2 className="font-display font-bold text-white/90 text-xl">Sua sacola está vazia</h2>
+                <h2 className="font-display font-bold text-white/90 text-xl">Sacola vazia.</h2>
                 <p className="text-sm text-white/40 mt-2 leading-relaxed">
-                    Explore nossa coleção e encontre<br />peças que combinam com você.
+                    Vai dar uma olhada no drop?
                 </p>
             </div>
-            <div className="flex flex-col gap-3 w-full">
-                <Link href="/produtos" className="btn-primary justify-center w-full">
-                    Explorar coleção
-                </Link>
-                <Link href="/sale" className="btn-outline justify-center w-full">
-                    Ver promoções
-                </Link>
-            </div>
+            <Link href="/produtos" className="btn-primary justify-center w-full">
+                VER CATÁLOGO
+            </Link>
         </motion.div>
     );
 }

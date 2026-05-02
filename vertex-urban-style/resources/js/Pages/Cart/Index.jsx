@@ -85,7 +85,7 @@ export default function CartIndex({ cart }) {
 
             <div className="container-page py-8 lg:py-12">
                 <h1 className="section-title mb-8">
-                    Meu Carrinho
+                    SACOLA
                     <span className="text-white/30 text-lg font-normal ml-3">
                         {cart.item_count} {cart.item_count === 1 ? 'item' : 'itens'}
                     </span>
@@ -181,7 +181,7 @@ export default function CartIndex({ cart }) {
                                 href={route('products.index')}
                                 className="text-sm text-white/40 hover:text-primary transition-colors flex items-center gap-1"
                             >
-                                ← Continuar comprando
+                                ← VER CATÁLOGO
                             </Link>
                         </div>
                     </div>
@@ -210,13 +210,13 @@ export default function CartIndex({ cart }) {
                                         disabled={couponForm.processing}
                                         className="btn-outline btn-sm px-4 flex-shrink-0"
                                     >
-                                        Aplicar
+                                        APLICAR CUPOM
                                     </button>
                                 </form>
                             ) : (
                                 <div className="flex items-center justify-between px-3 py-2.5 rounded-xl bg-green-400/10 border border-green-400/20">
                                     <span className="text-sm text-green-300">
-                                        Cupom <strong>{cart.coupon_code}</strong> aplicado
+                                        Cupom <strong>{cart.coupon_code}</strong> aplicado. Bom proveito.
                                     </span>
                                     <button
                                         onClick={() => router.post(route('cart.apply-coupon'), { code: '' })}
@@ -280,17 +280,17 @@ export default function CartIndex({ cart }) {
                             {/* Valores */}
                             <div className="space-y-2.5 text-sm">
                                 <div className="flex justify-between text-white/60">
-                                    <span>Subtotal</span>
+                                    <span className="uppercase tracking-wide text-xs font-semibold">Subtotal</span>
                                     <span>{fmt(cart.subtotal)}</span>
                                 </div>
                                 {cart.discount > 0 && (
                                     <div className="flex justify-between text-green-400">
-                                        <span>Desconto</span>
+                                        <span className="uppercase tracking-wide text-xs font-semibold">Desconto</span>
                                         <span>-{fmt(cart.discount)}</span>
                                     </div>
                                 )}
                                 <div className="flex justify-between text-white/60">
-                                    <span className="flex items-center gap-1">
+                                    <span className="uppercase tracking-wide text-xs font-semibold flex items-center gap-1">
                                         <TruckIcon className="w-4 h-4" /> Frete
                                     </span>
                                     <span className={cart.subtotal >= 299 ? 'text-primary' : ''}>
@@ -302,7 +302,7 @@ export default function CartIndex({ cart }) {
                             <div className="divider" />
 
                             <div className="flex justify-between font-semibold text-xl">
-                                <span>Total</span>
+                                <span className="uppercase tracking-wide text-sm">Total</span>
                                 <span>{fmt(cart.total)}</span>
                             </div>
                             <p className="text-xs text-white/30">
@@ -313,7 +313,7 @@ export default function CartIndex({ cart }) {
                                 href="/checkout"
                                 className="btn-primary btn-lg w-full justify-center"
                             >
-                                Fechar Pedido
+                                FECHAR PEDIDO
                             </Link>
 
                             {/* Selos */}

@@ -29,9 +29,12 @@ export default function Register() {
             >
                 <div className="text-center mb-8">
                     <Link href="/">
-                        <span className="font-display text-3xl font-bold text-gradient-brand">ERAS</span>
+                        <div className="font-display font-bold text-3xl tracking-[0.3em] uppercase text-eras-bone select-none inline-block">
+                            ERAS<span className="text-eras-mustard">.</span>
+                        </div>
                     </Link>
-                    <p className="text-white/40 text-sm mt-2">Crie sua conta</p>
+                    <p className="font-display font-bold text-xl tracking-tight mt-4">CRIAR CONTA</p>
+                    <p className="text-white/40 text-sm mt-1">Bem-vindo. Drop novo, você fica sabendo primeiro.</p>
                 </div>
 
                 <div className="card p-8">
@@ -101,7 +104,7 @@ export default function Register() {
                     <div className="divider my-6" />
 
                     <p className="text-center text-sm text-white/50">
-                        Já tem uma conta?{' '}
+                        Já tem conta?{' '}
                         <Link href={route('login')} className="text-primary hover:text-primary-400 font-medium">
                             Entrar
                         </Link>

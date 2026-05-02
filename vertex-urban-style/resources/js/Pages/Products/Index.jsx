@@ -79,7 +79,7 @@ export default function ProductsIndex({
                                 ? `Resultados para "${filters.search}"`
                                 : filters.category
                                     ? filters.category
-                                    : 'Todos os Produtos'}
+                                    : 'CATÁLOGO'}
                         </h1>
                         <p className="section-subtitle mt-1">
                             {products?.total ?? total ?? 0}{' '}
@@ -160,12 +160,21 @@ export default function ProductsIndex({
                     <div className="flex-1 min-w-0">
                         {products?.data?.length === 0 ? (
                             <div className="card p-16 text-center">
-                                <div className="text-5xl mb-4">🛍️</div>
-                                <p className="font-display text-xl font-bold mb-2">Nenhum produto encontrado</p>
-                                <p className="text-white/40 mb-6">Tente ajustar ou limpar os filtros.</p>
-                                <button onClick={clearAll} className="btn-primary">
-                                    Limpar filtros
-                                </button>
+                                <p className="font-display text-xl font-bold mb-2">
+                                    {activeFilterCount > 0
+                                        ? 'Sem resultado.'
+                                        : 'Sem peças no momento.'}
+                                </p>
+                                <p className="text-white/40 mb-6">
+                                    {activeFilterCount > 0
+                                        ? 'Tenta limpar os filtros.'
+                                        : 'O próximo drop tá vindo.'}
+                                </p>
+                                {activeFilterCount > 0 && (
+                                    <button onClick={clearAll} className="btn-primary">
+                                        Limpar filtros
+                                    </button>
+                                )}
                             </div>
                         ) : (
                             <ProductGrid products={products} />

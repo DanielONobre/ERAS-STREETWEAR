@@ -14,9 +14,9 @@ import {
 
 /* ─── Steps ──────────────────────────────────────────────────────────── */
 const STEPS = [
-    { label: 'Identificação', icon: MapPinIcon },
-    { label: 'Entrega',       icon: TruckIcon },
-    { label: 'Pagamento',     icon: CreditCardIcon },
+    { label: 'ENTREGA',      icon: MapPinIcon },
+    { label: 'PAGAMENTO',    icon: TruckIcon },
+    { label: 'CONFIRMAÇÃO',  icon: CreditCardIcon },
 ];
 
 const SHIPPING_METHODS = [
@@ -680,14 +680,14 @@ export default function CheckoutIndex({ cart, pricing, addresses = [] }) {
                                         >
                                             {loading
                                                 ? <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                                                : <><LockClosedIcon className="w-4 h-4" /> Finalizar pedido</>
+                                                : <><LockClosedIcon className="w-4 h-4" /> CONFIRMAR PEDIDO</>
                                             }
                                         </button>
                                     </div>
 
                                     <p className="flex items-center justify-center gap-1 text-xs text-white/30 mt-4">
                                         <LockClosedIcon className="w-3 h-3" />
-                                        Pagamento 100% seguro e criptografado
+                                        Pagamento processado em ambiente seguro. Seus dados não são armazenados.
                                     </p>
                                 </motion.div>
                             )}

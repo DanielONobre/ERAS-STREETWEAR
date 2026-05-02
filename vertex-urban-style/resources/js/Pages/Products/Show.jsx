@@ -454,7 +454,7 @@ export default function ProductShow({ product, relatedProducts = [] }) {
                                 stock <= 5 ? (
                                     <div className="flex items-center gap-2 text-sm">
                                         <ExclamationTriangleIcon className="w-4 h-4 text-amber-400" />
-                                        <span className="text-amber-400">Apenas {stock} restantes!</span>
+                                        <span className="text-amber-400">Restam {stock} peças desse tamanho.</span>
                                     </div>
                                 ) : (
                                     <div className="flex items-center gap-2 text-sm">
@@ -495,17 +495,17 @@ export default function ProductShow({ product, relatedProducts = [] }) {
                                 ) : (
                                     <ShoppingBagIcon className="w-5 h-5" />
                                 )}
-                                {!inStock ? 'Esgotado' : adding ? 'Adicionando...' : 'Adicionar ao Carrinho'}
+                                {!inStock ? 'ESGOTOU. Quem foi rápido pegou.' : adding ? 'Adicionando...' : 'LEVAR PRA MIM'}
                             </button>
 
                             <button
                                 onClick={handleWishlist}
-                                className={`btn-outline w-12 h-12 flex-shrink-0 flex items-center justify-center transition-all ${wished ? 'border-red-500/50 text-red-400' : ''}`}
-                                aria-label="Favoritar"
+                                className={`btn-outline flex-shrink-0 flex items-center justify-center gap-2 px-4 h-12 transition-all text-sm font-medium ${wished ? 'border-red-500/50 text-red-400' : ''}`}
+                                aria-label="Salvar"
                             >
                                 {wished
-                                    ? <HeartSolid className="w-5 h-5 text-red-400" />
-                                    : <HeartIcon className="w-5 h-5" />
+                                    ? <><HeartSolid className="w-4 h-4 text-red-400" /><span>SALVO</span></>
+                                    : <><HeartIcon className="w-4 h-4" /><span>SALVAR</span></>
                                 }
                             </button>
                         </div>
@@ -524,7 +524,7 @@ export default function ProductShow({ product, relatedProducts = [] }) {
 
                         {/* Accordions */}
                         <div className="border-t border-white/[0.06]">
-                            <Accordion title="Descrição completa" defaultOpen>
+                            <Accordion title="DESCRIÇÃO" defaultOpen>
                                 <div
                                     className="prose prose-invert prose-sm max-w-none"
                                     dangerouslySetInnerHTML={{
@@ -533,7 +533,7 @@ export default function ProductShow({ product, relatedProducts = [] }) {
                                 />
                             </Accordion>
 
-                            <Accordion title="Composição & Cuidados">
+                            <Accordion title="COMPOSIÇÃO E CUIDADOS">
                                 <div className="prose prose-invert prose-sm max-w-none">
                                     {product.composition ? (
                                         <div dangerouslySetInnerHTML={{ __html: product.composition }} />
@@ -571,7 +571,7 @@ export default function ProductShow({ product, relatedProducts = [] }) {
                                 </div>
                             </Accordion>
 
-                            <Accordion title="Entrega & Trocas">
+                            <Accordion title="ENTREGA E TROCA">
                                 <div className="space-y-3 text-white/60">
                                     <p>🚚 <strong className="text-white">Frete grátis</strong> para compras acima de R$299</p>
                                     <p>📦 Prazo de entrega: PAC 5–8 dias úteis, SEDEX 1–3 dias úteis</p>

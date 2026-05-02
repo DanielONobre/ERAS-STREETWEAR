@@ -12,12 +12,14 @@ use App\Http\Controllers\WishlistController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 
 // ── SEO ────────────────────────────────────────────────────────────────────────
 Route::get('/sitemap.xml', [\App\Http\Controllers\SitemapController::class, 'index'])->name('sitemap');
 
 // ── STOREFRONT (público) ───────────────────────────────────────────────────────
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/manifesto', fn () => Inertia::render('Manifesto'))->name('manifesto');
 Route::get('/produtos', [ProductController::class, 'index'])->name('products.index');
 Route::get('/produtos/{slug}', [ProductController::class, 'show'])->name('products.show');
 Route::get('/categoria/{slug}', [CategoryController::class, 'show'])->name('categories.show');

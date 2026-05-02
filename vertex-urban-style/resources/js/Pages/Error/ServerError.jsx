@@ -4,9 +4,9 @@ import { HomeIcon, ArrowPathIcon } from '@heroicons/react/24/outline';
 
 export default function ServerError({ status = 500 }) {
     const messages = {
-        500: { title: 'Erro interno do servidor', desc: 'Algo deu errado no nosso lado. Nossa equipe já foi notificada.' },
-        503: { title: 'Serviço indisponível', desc: 'Estamos em manutenção. Voltaremos em breve.' },
-        419: { title: 'Sessão expirada', desc: 'Sua sessão expirou por inatividade. Recarregue a página.' },
+        500: { title: 'Deu ruim do nosso lado.', desc: 'Já tamo arrumando.' },
+        503: { title: 'Fora do ar por enquanto.', desc: 'Manutenção em andamento. Volta em breve.' },
+        419: { title: 'Sessão expirada.', desc: 'Recarregue a página e tente de novo.' },
     };
 
     const { title, desc } = messages[status] ?? messages[500];
@@ -77,7 +77,7 @@ export default function ServerError({ status = 500 }) {
                             className="btn-primary btn-lg gap-2 w-full sm:w-auto justify-center"
                         >
                             <ArrowPathIcon className="w-4 h-4" />
-                            Tentar novamente
+                            TENTAR DE NOVO
                         </button>
                         <Link href="/" className="btn-outline btn-lg gap-2 w-full sm:w-auto justify-center">
                             <HomeIcon className="w-4 h-4" />

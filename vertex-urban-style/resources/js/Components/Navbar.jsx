@@ -122,7 +122,7 @@ function PromoBanner() {
             exit={{ height: 0, opacity: 0 }}
             className="bg-primary text-white text-xs font-medium text-center py-2 px-8 relative select-none"
         >
-            🚚&nbsp; <strong>Frete Grátis</strong> em compras acima de R$&nbsp;299 — use o código{' '}
+            <strong>Frete grátis</strong> em compras acima de R$&nbsp;299 — código{' '}
             <strong>FRETEGRATIS</strong>
             <button
                 onClick={() => {
@@ -395,9 +395,9 @@ export default function Navbar() {
 
                     {/* Logo */}
                     <Link href="/" className="flex-shrink-0">
-                        <span className="font-display text-xl font-bold tracking-tight">
-                            ERAS<span className="text-primary">.</span>
-                        </span>
+                        <div className="font-display font-bold text-2xl tracking-[0.3em] uppercase text-eras-bone select-none">
+                            ERAS<span className="text-eras-mustard">.</span>
+                        </div>
                     </Link>
 
                     {/* Desktop nav */}
@@ -561,9 +561,9 @@ export default function Navbar() {
                         >
                             {/* Header */}
                             <div className="flex items-center justify-between px-5 py-4 border-b border-white/[0.06]">
-                                <span className="font-display font-bold text-lg">
-                                    ERAS<span className="text-primary">.</span>
-                                </span>
+                                <div className="font-display font-bold text-xl tracking-[0.3em] uppercase text-eras-bone select-none">
+                                    ERAS<span className="text-eras-mustard">.</span>
+                                </div>
                                 <button onClick={() => setMobile(false)} className="btn-icon text-white/50" aria-label="Fechar menu">
                                     <XMarkIcon className="w-5 h-5" />
                                 </button>
